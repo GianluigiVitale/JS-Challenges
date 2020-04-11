@@ -361,7 +361,6 @@
 //-----------------------------------------------------------------------------------------------------
 	/* 19. Find the Smallest and Biggest Numbers
 		>Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
-		NOTES: Note the strict inequality
 	*/
 
 // var arr = [14, 35, 6, 1, 34, 54];
@@ -396,7 +395,6 @@
 		arr1 can be nested inside arr2 if:
 			arr1's min is greater than arr2's min.
 			arr1's max is less than arr2's max.
-		NOTES: Note the strict inequality
 	*/
 
 // var arr1 = [3, 1];
@@ -438,7 +436,6 @@
 //-----------------------------------------------------------------------------------------------------
     /* 21. Find the Smallest and Biggest Numbers (part 2)
         >Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
-        NOTES: Note the strict inequality
     */
 
 // var n1 = -2;
@@ -699,6 +696,251 @@
 //             return "found the needle at position " + i;
 //         }
 //     }
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 33. SpeedCode #2 - Array Madness
+        >Given two integer arrays a, b, both of length >= 1,
+         create a program that returns true if the sum of the squares of each
+         element in a is strictly greater than the sum of the cubes of each element in b.
+        NOTES:
+    */
+
+// var a = [4,5,6];
+// var b = [1,2,3];
+//
+// var funzione = arrayMadness(a, b);
+// console.log(funzione);
+//
+// function arrayMadness(a, b) {
+//     var squareA = 0;
+//     var squareB = 0;
+//
+//     for (var i = 0; i < a.length; i++) {
+//         var squareI = Math.pow(a[i], 2);
+//         squareA += squareI;
+//     }
+//     for (var i = 0; i < b.length; i++) {
+//         var squareI = Math.pow(b[i], 3);
+//         squareB += squareI;
+//     }
+//
+//     if (squareA > squareB) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 34. Polish alphabet
+        >There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+        Your task is to change the letters with diacritics:
+        ą -> a,
+        ć -> c,
+        ę -> e,
+        ł -> l,
+        ń -> n,
+        ó -> o,
+        ś -> s,
+        ź -> z,
+        ż -> z
+        and print out the string without the use of the Polish letters.
+        NOTES:
+    */
+
+// var string = "Jędrzej Błądziński";
+//
+// var funzione = correctPolishLetters(string);
+// console.log(funzione);
+//
+// function correctPolishLetters(string) {
+//     var polishDiacritics = {
+//         ą: 'a',
+//         ć: 'c',
+//         ę: 'e',
+//         ł: 'l',
+//         ń: 'n',
+//         ó: 'o',
+//         ś: 's',
+//         ź: 'z',
+//         ż: 'z'
+//     }
+//
+//     var newString = '';
+//
+//     for (var i = 0; i < string.length; i++) {
+//         var modifyChar = false;
+//
+//         for (var key in polishDiacritics) {
+//             if (string[i] == key) {
+//                 newString += polishDiacritics[key]
+//                 modifyChar = true;
+//             }
+//         }
+//
+//         if (modifyChar == false) {
+//             newString += string[i]
+//         }
+//     }
+//
+//     return newString;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 35. Counting sheep...
+
+        >Consider an array/list of sheep where some sheep may be missing from their place.
+         We need a function that counts the number of sheep present in the array (true means present).
+         For example: [true,  true,  true,  false,
+                      true,  true,  true,  true ,
+                      true,  false, true,  false,
+                      true,  false, false, true ,
+                      true,  true,  true,  true ,
+                      false, false, true,  true]
+         The correct answer would be 17.
+        NOTES:
+    */
+
+// var arrayOfSheep = [true,  true,  true,  false,
+//                     true,  true,  true,  true ,
+//                     true,  false, true,  false,
+//                     true,  false, false, true ,
+//                     true,  true,  true,  true ,
+//                     false, false, true,  true ];
+//
+// var funzione = countSheeps(arrayOfSheep);
+// console.log(funzione);
+//
+// function countSheeps(arrayOfSheep) {
+//     var sheepCount = 0;
+//
+//     for (var i = 0; i < arrayOfSheep.length; i++) {
+//         if (arrayOfSheep[i] === true) {
+//             sheepCount += 1;
+//         }
+//     }
+//
+//     return sheepCount;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 36. Basic Mathematical Operations
+
+        >Your task is to create a function that does four basic mathematical operations.
+        The function should take three arguments - operation(string/char), value1(number), value2(number).
+        The function should return result of numbers after applying the chosen operation.
+         For example:   basicOp('+', 4, 7)         // Output: 11
+                        basicOp('-', 15, 18)       // Output: -3
+                        basicOp('*', 5, 5)         // Output: 25
+                        basicOp('/', 49, 7)        // Output: 7
+         The correct answer would be 17.
+        NOTES:
+    */
+
+// var operation = '+';
+// var value1 = 4;
+// var value2 = 7;
+//
+// var funzione = basicOp(operation, value1, value2);
+// console.log(funzione);
+//
+// function basicOp(operation, value1, value2) {
+//     switch (operation) {
+//         case '+':
+//             return value1 + value2
+//             break;
+//         case '-':
+//             return value1 - value2
+//             break;
+//         case '*':
+//             return value1 * value2
+//             break;
+//         case '/':
+//             return value1 / value2
+//             break;
+//     }
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 37. Rock Paper Scissors
+
+        >Let's play! You have to return which player won! In case of a draw return Draw!.
+        NOTES:
+            http://i.imgur.com/aimOQVX.png
+    */
+
+// var player1 = 'scissors';
+// var player2 = 'paper';
+//
+// var funzione = game(player1, player2);
+// console.log(funzione);
+//
+// function game(player1, player2) {
+//     if (player1 == player2) {
+//         return 'Draw!'
+//     } else {
+//         if (player1 == 'paper') {
+//             if (player2 == 'rock') {
+//                 return 'Player 1 won!';
+//             } else {
+//                 return 'Player 2 won!';
+//             }
+//         } else if (player1 == 'scissors') {
+//             if (player2 == 'paper') {
+//                 return 'Player 1 won!';
+//             } else {
+//                 return 'Player 2 won!';
+//             }
+//         } else if (player1 == 'rock') {
+//             if (player2 == 'scissors') {
+//                 return 'Player 1 won!';
+//             } else {
+//                 return 'Player 2 won!';
+//             }
+//         }
+//     }
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 38. Character Frequency
+
+        >In this kata, you will get a message and you will need to get the frequency of each and every character!
+          Your function will be called charFreq and you will get passed a string,
+          you will then return a dictionary (object in JavaScript) with as keys the characters,
+          and as values how many times that character is in the string.
+          You can assume you will be given valid input.
+          Example:
+          charFreq("I like cats") // Returns {'a': 1, ' ': 2, 'c': 1, 'e': 1, 'I': 1, 'k': 1, 'l': 1, 'i': 1, 's': 1, 't': 1}
+        NOTES:
+            http://i.imgur.com/aimOQVX.png
+    */
+
+// var message = 'Your solution';
+//
+// var funzione = charFreq(message);
+// console.log(funzione);
+//
+// function charFreq(message) {
+//     var dictionary = {};
+//
+//     for (var i = 0; i < message.length; i++) {
+//         var messageI = message[i];
+//         // console.log(messageI);
+//
+//         if (dictionary[messageI] === undefined) {
+//             dictionary[messageI] = 0;
+//         }
+//         dictionary[messageI] += 1;
+//     }
+//
+//     return dictionary;
 // }
 //-----------------------------------------------------------------------------------------------------
 

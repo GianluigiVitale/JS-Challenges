@@ -1,4 +1,4 @@
-### The challenges are taken from websites like codewars.com or edabit.com.
+### The challenges are taken from codewars.com
 ***
 **To look for a specific challenge just search in the JS file for 'Challenge Name'**  
 _For Example: to find the 12th challenge (Volume of a Box) just search for: Volume of a Box_
@@ -38,3 +38,9 @@ _The challenges are organized in a chronological order_
 30. Find the smallest integer in the array
 31. Is n divisible by x and y?
 32. A Needle in the Haystack
+33. SpeedCode #2 - Array Madness
+34. Polish alphabet
+35. Counting sheep...
+36. Basic Mathematical Operations
+37. Rock Paper Scissors
+38. Character Frequency
