@@ -51,3 +51,4 @@ _The challenges are organized in a chronological order_
 43. Expressions Matter
 44. Find the Difference in Age between Oldest and Youngest Family Members
 45. Removing Elements
+46. Practice creating a binary search algorithm
