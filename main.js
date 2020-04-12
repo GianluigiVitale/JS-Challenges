@@ -239,8 +239,7 @@
 // }
 //-----------------------------------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------------------------------
-	// --------------------------------- DA RIGUARDARE ---------------------------------
+//-----------------------------------------------------------------------------------------------------     // DA RIGUARDARE
 	// 14. Filter Repeating Character Strings
 	/*  Create a function that keeps only strings with repeating identical characters (in other words, it has a set size of 1).
 		NOTES: 	A string with a single character is trivially counted as a string with repeating identical characters.
@@ -975,6 +974,69 @@
 //         }
 //
 //     }
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 40. Convert number to reversed array of digits
+
+        >Given a random number: You have to return the digits of this number within an array in reverse order.
+          Example:
+          348597 => [7,9,5,8,4,3]
+    */
+
+// var n = 35231;
+//
+// var funzione = digitize(n);
+// console.log(funzione);
+//
+// function digitize(n) {
+//     var numberToString = n.toString();
+//     var arrayNumberReversed = [];
+//
+//     for (var i = numberToString.length - 1; i >= 0; i--) {
+//         arrayNumberReversed.push(parseInt(numberToString[i]))
+//     }
+//
+//     return arrayNumberReversed;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------     // DA RIGUARDARE
+    /* 41. Count of positives / sum of negatives
+
+        >Given an array of integers.Return an array, where the first element is
+        the count of positives numbers and the second element is sum of negative numbers.
+        If the input array is empty or null, return an empty array.
+          Example:
+          For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+    */
+
+// var input = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14];
+//
+//
+// var funzione = countPositivesSumNegatives(input);
+// console.log(funzione);
+//
+// function countPositivesSumNegatives(input) {
+//     if (input === null || input.length == 0) {
+//         return [];
+//     }
+//
+//     var countPositiveNumber = 0;
+//     var sumNegativeNumber = 0;
+//
+//     for (var i = 0; i < input.length; i++) {
+//         if (input[i] > 0) {
+//             countPositiveNumber += 1;
+//         } else {
+//             sumNegativeNumber += input[i];
+//         }
+//     }
+//
+//     var arrayPosNeg = [countPositiveNumber, sumNegativeNumber];
+//
+//     return arrayPosNeg;
 // }
 //-----------------------------------------------------------------------------------------------------
 

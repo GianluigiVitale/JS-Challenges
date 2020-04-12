@@ -45,3 +45,5 @@ _The challenges are organized in a chronological order_
 37. Rock Paper Scissors
 38. Character Frequency
 39. Century From Year
+40. Convert number to reversed array of digits
+41. Count of positives / sum of negatives
