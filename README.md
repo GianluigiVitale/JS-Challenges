@@ -47,3 +47,7 @@ _The challenges are organized in a chronological order_
 39. Century From Year
 40. Convert number to reversed array of digits
 41. Count of positives / sum of negatives
+42. You're a square!
+43. Expressions Matter
+44. Find the Difference in Age between Oldest and Youngest Family Members
+45. Removing Elements
