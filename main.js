@@ -1178,21 +1178,21 @@
 //-----------------------------------------------------------------------------------------------------
         // 46. Practice creating a binary search algorithm
 
-var numbers = [96, 58, 24, 30, 18, 32, 90, 63, 87, 56, 8, 15, 86, 74, 80, 99, 60,
-               49, 97, 25, 77, 67, 57, 11, 95, 70, 7, 59, 19, 3, 23, 93, 66, 45,
-               84, 21, 48, 83, 6, 16, 9];
-
-var arrClone = numbers;
-var arrSorted = arrClone.sort(function(a, b){return a-b});
-console.log(arrSorted);
-
-var t0 = performance.now();
-
-var posizioneX = binarySearch(arrSorted, 0, arrSorted.length - 1, 99);
-console.log(posizioneX);
-
-var t1 = performance.now();
-console.log('It took ' + (t1 - t0) + ' milliseconds');
+// var numbers = [96, 58, 24, 30, 18, 32, 90, 63, 87, 56, 8, 15, 86, 74, 80, 99, 60,
+//                49, 97, 25, 77, 67, 57, 11, 95, 70, 7, 59, 19, 3, 23, 93, 66, 45,
+//                84, 21, 48, 83, 6, 16, 9];
+//
+// var arrClone = numbers;
+// var arrSorted = arrClone.sort(function(a, b){return a-b});
+// console.log(arrSorted);
+//
+// var t0 = performance.now();
+//
+// var posizioneX = binarySearch(arrSorted, 0, arrSorted.length - 1, 99);
+// console.log(posizioneX);
+//
+// var t1 = performance.now();
+// console.log('It took ' + (t1 - t0) + ' milliseconds');
 
 // function binarySearch(arr, l, r, x) {    // return the index of x (recursive)
 //     if (r >= l) {
@@ -1220,6 +1220,39 @@ console.log('It took ' + (t1 - t0) + ' milliseconds');
 //         }
 //     }
 //     return -1;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 47. Rotate an array
+
+        >Write a function rotate(arr[], d, n) that rotates arr[] of size n by d elements.
+          Example:
+                Input arr[] = [1, 2, 3, 4, 5, 6, 7], d = 2, n =7    ==>
+                arr[] = [3, 4, 5, 6, 7, 1, 2]
+    */
+
+// var arr = [1, 2, 3, 4, 5, 6, 7];
+// var d = 2;
+//
+//
+// var funzione = leftRotate(arr, d);
+// console.log(funzione);
+//
+// function leftRotate(arr, d) {
+//     var arrFirstDElements = [];
+//     var restOfArray = [];
+//
+//     for (var i = 0; i < d; i++) {
+//         arrFirstDElements.push(arr[i])
+//     }
+//     for (var i = d; i < arr.length; i++) {
+//         restOfArray.push(arr[i])
+//     }
+//
+//     var rotatedArray = restOfArray.concat(arrFirstDElements);
+//
+//     return rotatedArray
 // }
 //-----------------------------------------------------------------------------------------------------
 

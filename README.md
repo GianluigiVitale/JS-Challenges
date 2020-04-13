@@ -52,3 +52,4 @@ _The challenges are organized in a chronological order_
 44. Find the Difference in Age between Oldest and Youngest Family Members
 45. Removing Elements
 46. Practice creating a binary search algorithm
+47. Rotate an array
