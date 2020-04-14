@@ -1603,6 +1603,323 @@
 // }
 //-----------------------------------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------------------------------
+    /* 57. Beginner Series #3 Sum of Numbers
+
+        >Given two integers a and b, which can be positive or negative,
+         find the sum of all the numbers between including them too and return it.
+         If the two numbers are equal return a or b.
+        EXAMPLE:
+            GetSum(1, 0) == 1   // 1 + 0 = 1
+            GetSum(1, 2) == 3   // 1 + 2 = 3
+            GetSum(0, 1) == 1   // 0 + 1 = 1
+            GetSum(1, 1) == 1   // 1 Since both are same
+            GetSum(-1, 0) == -1 // -1 + 0 = -1
+            GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
+        NOTES:
+            a and b are not ordered!
+    */
+
+// var a = -1;
+// var b = 2;
+//
+//
+// var funzione = getSum(a,b) ;
+// console.log(funzione);
+//
+// function getSum(a,b) {
+//     var min = 0;
+//     var max = 0;
+//
+//     if (a == b) {
+//         return a;
+//     } else if (a > b) {
+//         max = a;
+//         min = b;
+//     } else {
+//         min = a;
+//         max = b;
+//     }
+//
+//     var sum = 0;
+//     for (var i = min; i <= max; i++) {
+//         sum += i;
+//     }
+//
+//     return sum;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 58. Growth of a Population
+
+        >In a small town the population is p0 = 1000 at the beginning of a year.
+         The population regularly increases by 2 percent per year and
+         moreover 50 new inhabitants per year come to live in the town.
+         How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
+         More generally given parameters:
+         p0, percent, aug (inhabitants coming or leaving each year), p (population to surpass)
+         the function nb_year should return n number of entire years needed to get a population greater or equal to p.
+        EXAMPLE:
+            At the end of the first year there will be:
+            1000 + 1000 * 0.02 + 50 => 1070 inhabitants
+
+            At the end of the 2nd year there will be:
+            1070 + 1070 * 0.02 + 50 => 1141 inhabitants (number of inhabitants is an integer)
+
+            At the end of the 3rd year there will be:
+            1141 + 1141 * 0.02 + 50 => 1213
+
+            It will need 3 entire years.
+        NOTES:
+            aug is an integer, percent a positive or null number, p0 and p are positive integers (> 0)
+    */
+
+// var p0 = 1500;
+// var percent = 5;
+// var aug = 100;
+// var p = 5000;
+//
+//
+// var funzione = nbYear(p0, percent, aug, p) ;
+// console.log(funzione);
+//
+// function nbYear(p0, percent, aug, p) {
+//     var increasePerYear = (p0 * [1 + (percent / 100)]) + aug;
+//
+//     var i = 0;
+//     while (p0 < p) {
+//         p0 = (p0 * [1 + (percent / 100)]) + aug;
+//
+//         i++;
+//     }
+//
+//     return i;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 59. Two to One
+
+        >Take 2 strings s1 and s2 including only letters from ato z.
+         Return a new sorted string, the longest possible, containing distinct letters,
+         each taken only once - coming from s1 or s2.
+        EXAMPLE:
+            a = "xyaabbbccccdefww"
+            b = "xxxxyyyyabklmopq"
+            longest(a, b) -> "abcdefklmopqwxy"
+
+            a = "abcdefghijklmnopqrstuvwxyz"
+            longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+        NOTES:
+    */
+
+// var s1 = 'aretheyhere';
+// var s2 = 'yestheyarehere';
+//
+//
+// var funzione = longest(s1, s2);
+// console.log(funzione);
+//
+// function longest(s1, s2) {
+//     var sumString = s1 + s2;
+//
+//     var distinctString = [];
+//     for (var i = 0; i < sumString.length; i++) {
+//         if (!distinctString.includes(sumString[i])) { // if sumString[i] is not already present push
+//             distinctString.push(sumString[i]);
+//         }
+//     }
+//     var sortedArray = distinctString.sort();
+//     var sortedString = sortedArray.join('');
+//
+//     return sortedString;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 60. List Filtering
+
+        >In this kata you will create a function that takes a list of non-negative integers
+         and strings and returns a new list with the strings filtered out.
+        EXAMPLE:
+            filter_list([1,2,'a','b']) == [1,2]
+            filter_list([1,'a','b',0,15]) == [1,0,15]
+            filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+        NOTES:
+    */
+
+// var l = [1,2,'aasf','1','123',123];
+//
+//
+// var funzione = filter_list(l);
+// console.log(funzione);
+//
+// function filter_list(l) {
+//     var newList = [];
+//
+//     for (var i = 0; i < l.length; i++) {
+//         if (typeof l[i] == 'number') {      // used typeof instead of isNaN because isNaN takes the number even if it's in a string
+//             newList.push(l[i]);
+//         }
+//     }
+//
+//     return newList;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 61. Sum of two lowest positive integers
+
+        >Create a function that returns the sum of the two lowest positive numbers
+         given an array of minimum 4 positive integers.
+         No floats or non-positive integers will be passed.
+        EXAMPLE:
+            when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+            [10, 343445353, 3453445, 3453545353453] should return 3453455.
+        NOTES:
+    */
+
+// var numbers = [15, 28, 4, 2, 43];
+//
+//
+// var funzione = sumTwoSmallestNumbers(numbers);
+// console.log(funzione);
+//
+// function sumTwoSmallestNumbers(numbers) {
+//     var numbersSorted = numbers.slice(0).sort(function(a, b){return a-b});
+//     var sumOf2Lowest = numbersSorted[0] + numbersSorted[1];
+//
+//     return sumOf2Lowest;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 62. Credit Card Mask
+
+        >Your task is to write a function maskify, which changes all but the last four characters into '#'.
+         No floats or non-positive integers will be passed.
+        EXAMPLE:
+            maskify("4556364607935616") == "############5616"
+            maskify(     "64607935616") ==      "#######5616"
+            maskify(               "1") ==                "1"
+            maskify(                "") ==                 ""
+
+            // "What was the name of your first pet?"
+            maskify("Skippy")                                   == "##ippy"
+        NOTES:
+    */
+
+// var cc = '4556364607935616';
+//
+//
+// var funzione = maskify(cc);
+// console.log(funzione);
+//
+// function maskify(cc) {
+//     if (cc.length >= 5) {
+//         var maskedString = '';
+//         for (var i = 0; i < cc.length - 4; i++) {
+//             maskedString += '#';
+//         }
+//         for (var i = cc.length - 4; i < cc.length; i++) {
+//             maskedString += cc[i];
+//         }
+//
+//         return maskedString;
+//     } else {
+//         return cc;
+//     }
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 63. Sum of odd numbers
+
+        >Given the triangle of consecutive odd numbers:
+                            1
+                         3     5
+                      7     9    11
+                   13    15    17    19
+                21    23    25    27    29
+                            ...
+        Calculate the row sums of this triangle from the row index (starting at index 1) e.g.:
+        EXAMPLE:
+            rowSumOddNumbers(1); // 1
+            rowSumOddNumbers(2); // 3 + 5 = 8
+        NOTES:
+    */
+
+// var n = 5;
+//
+//
+// var funzione = rowSumOddNumbers(n);
+// console.log(funzione);
+//
+//
+// function rowSumOddNumbers(n) {  // easy solution
+//     return Math.pow(n, 3);
+// }
+// function rowSumOddNumbers(n) {
+//     if (n == 1) {
+//         return 1;
+//     }
+//
+//     var numbersToCreateBefore = 0;
+//     for (var i = n - 1; i > 0; i--) {           // this for loop tells me how many odd numbers there are before
+//         numbersToCreateBefore += i;             // the selected row (n)
+//     }
+//
+//     var oddNumber = 1;
+//     for (var i = 1; i < numbersToCreateBefore; i++) {   // since now I know how many odd numbers there are before n
+//         oddNumber += 2;                                 // with a for loop I can create the last odd number before the row n
+//     }
+//
+//     var rowSumNumber = 0;
+//     for (var i = 1; i <= n; i++) {              // now I can create the sum of the row numbers by generating the next odd numbers
+//         oddNumber += 2;                         // that are equal to the number of the row
+//         rowSumNumber += oddNumber;
+//     }
+//
+//     return rowSumNumber;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 64. Find the next perfect square!
+
+        >Find the next integral perfect square after the one passed as a parameter.
+         Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+         If the parameter is itself not a perfect square, than -1 should be returned.
+         You may assume the parameter is positive.
+        EXAMPLE:
+            findNextSquare(121) --> returns 144
+            findNextSquare(625) --> returns 676
+            findNextSquare(114) --> returns -1 since 114 is not a perfect
+        NOTES:
+    */
+
+// var sq = 121;
+//
+//
+// var funzione = findNextSquare(sq);
+// console.log(funzione);
+//
+// function findNextSquare(sq) {
+//     if (!Number.isInteger(Math.sqrt(sq))) { // if 'sq' is not a perfect square
+//         return -1;
+//     }
+//
+//     var newSq = sq + 1;
+//     while (!Number.isInteger(Math.sqrt(newSq))) {   // I add 1 to 'newSq' until the square of that number is not an integer
+//         newSq++;
+//     }
+//
+//     return newSq;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+
 
 
 

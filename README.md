@@ -62,3 +62,11 @@ _The challenges are organized in a chronological order_
 54. Remove vowels
 55. Isograms
 56. Capitalize words from string
+57. Beginner Series #3 Sum of Numbers
+58. Growth of a Population
+59. Two to One
+60. List Filtering
+61. Sum of two lowest positive integers
+62. Credit Card Mask
+63. Sum of odd numbers
+64. Find the next perfect square!
