@@ -56,3 +56,9 @@ _The challenges are organized in a chronological order_
 48. Vowel Count
 49. Mumbling
 50. Highest and Lowest from string
+51. Square Every Digit
+52. Descending Order
+53. Shortest Word
+54. Remove vowels
+55. Isograms
+56. Capitalize words from string

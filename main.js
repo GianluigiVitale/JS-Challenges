@@ -1401,6 +1401,209 @@
 // }
 //-----------------------------------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------------------------------
+    /* 51. Square Every Digit
+
+        >Welcome. In this kata, you are asked to square every digit of a number.
+        EXAMPLE:
+            For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+        NOTES:
+            The function accepts an integer and returns an integer
+    */
+
+// var num = 9119;
+//
+//
+// var funzione = squareDigits(num);
+// console.log(funzione);
+//
+// function squareDigits(num) {
+//     var string = num.toString();
+//     var squareDigit = '';
+//
+//     for (var i = 0; i < string.length; i++) {
+//         var num = parseInt(string[i]);
+//         var square = Math.pow(num, 2);
+//
+//         squareDigit += square;
+//     }
+//
+//     return parseInt(squareDigit);
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 52. Descending Order
+
+        >Your task is to make a function that can take any non-negative integer as a argument and return it
+         with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+        EXAMPLE:
+            Input: 21445 Output: 54421
+            Input: 145263 Output: 654321
+            Input: 123456789 Output: 987654321
+        NOTES:
+    */
+
+// var n = 123456789;
+//
+//
+// var funzione = descendingOrder(n);
+// console.log(funzione);
+//
+// function descendingOrder(n) {
+//     var nString = n.toString();
+//     var tempArray = [];
+//
+//     for (var i = 0; i < nString.length; i++) {
+//         tempArray.push(parseInt(nString[i]));
+//     }
+//
+//     tempArray.sort(function(a, b){return b-a});
+//     var arrayJoined = parseInt(tempArray.join(''));
+//
+//     return arrayJoined;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 53. Shortest Word
+
+        >Simple, given a string of words, return the length of the shortest word(s).
+         String will never be empty and you do not need to account for different data types.
+        EXAMPLE:
+        NOTES:
+    */
+
+// var s = 'turns out random test cases are easier than writing out basic ones';
+//
+//
+// var funzione = findShort(s);
+// console.log(funzione);
+//
+// function findShort(s) {
+//     var arrayStr = s.split(' ');
+//
+//     var shortestString = arrayStr[0];
+//     for (var i = 0; i < arrayStr.length; i++) {
+//         if (arrayStr[i].length < shortestString.length) {
+//             shortestString = arrayStr[i];
+//         }
+//     }
+//
+//     return shortestString.length;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 54. Remove vowels
+
+        >Your task is to write a function that takes a string and return a new string with all vowels removed.
+        EXAMPLE:
+            the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+        NOTES:
+    */
+
+// var str = "This website is for losers LOL!";
+//
+//
+// var funzione = disemvowel(str);
+// console.log(funzione);
+//
+// function disemvowel(str) {
+//     var newStr = '';
+//     for (var i = 0; i < str.length; i++) {
+//         switch (str[i]) {
+//             case 'a':
+//                 break
+//             case 'A':
+//                 break
+//             case 'e':
+//                 break
+//             case 'E':
+//                 break
+//             case 'i':
+//                 break
+//             case 'I':
+//                 break
+//             case 'o':
+//                 break
+//             case 'O':
+//                 break
+//             case 'u':
+//                 break
+//             case 'U':
+//                 break
+//             default:
+//                 newStr += str[i];
+//         }
+//     }
+//
+//     return newStr;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 55. Isograms
+
+        >An isogram is a word that has no repeating letters, consecutive or non-consecutive.
+         Implement a function that determines whether a string that contains only letters is an isogram.
+         Assume the empty string is an isogram.
+        EXAMPLE:
+            isIsogram("Dermatoglyphics") == true
+            isIsogram("aba") == false
+            isIsogram("moOse") == false
+        NOTES:
+    */
+
+// var str = "Dermatoglyphics";
+// var str = "moOse";
+//
+//
+// var funzione = isIsogram(str);
+// console.log(funzione);
+//
+// function isIsogram(str) {
+//     for (var i = 0; i < str.length; i++) {
+//         for (var j = (i + 1); j < str.length; j++) {
+//             if (str[i].toLowerCase() == str[j].toLowerCase()) {
+//                 return false;
+//             }
+//         }
+//     }
+//     return true;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 56. Capitalize words from string
+
+        >Your task is to capitalize each word
+        EXAMPLE:
+        "How can mirrors be real if our eyes aren't real" ===> "How Can Mirrors Be Real If Our Eyes Aren't Real"
+        NOTES:
+    */
+
+// var str = "How can mirrors be real if our eyes aren't real";
+//
+//
+// var funzione = capitalize(str);
+// console.log(funzione);
+//
+// function capitalize(str) {
+//     var strArray = str.split(' ');
+//     var arrayCapitalized = [];
+//
+//     for (var i = 0; i < strArray.length; i++) {
+//         let stringICapitalized = strArray[i][0].toUpperCase() + strArray[i].substring(1);
+//         arrayCapitalized.push(stringICapitalized);
+//     }
+//     var stringCapitalized = arrayCapitalized.join(' ');
+//
+//     return stringCapitalized;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+
 
 
 
