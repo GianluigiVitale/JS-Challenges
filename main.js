@@ -1,3 +1,4 @@
+    // 8kyu
 //-----------------------------------------------------------------------------------------------------
 	// 1. Reverse Array
 // var array = [8,2,5,9,7,3,6,2]
@@ -433,8 +434,9 @@
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
-    /* 21. Find the Smallest and Biggest Numbers (part 2)
-        >Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+    /* 21. Equal sign
+        >Create a function that return true if n1 and n2 > 0 or if n1 and n2 < 0 or if n1 and n2 = 0 else
+         return false
     */
 
 // var n1 = -2;
@@ -1253,6 +1255,149 @@
 //     var rotatedArray = restOfArray.concat(arrFirstDElements);
 //
 //     return rotatedArray
+// }
+//-----------------------------------------------------------------------------------------------------
+    // 7ku
+//-----------------------------------------------------------------------------------------------------
+    /* 48. Vowel Count
+
+        >Return the number (count) of vowels in the given string.
+         We will consider a, e, i, o, and u as vowels for this Kata.
+         The input string will only consist of lower case letters and/or spaces.
+    */
+
+// var str = 'abracadabra';
+//
+//
+// var funzione = getCount(str);
+// console.log(funzione);
+//
+// function getCount(str) {
+//     var vowelsCount = 0;
+//
+//     for (var i = 0; i < str.length; i++) {
+//         if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+//             vowelsCount++;
+//         }
+//     }
+//
+//     return vowelsCount;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 49. Mumbling
+
+        >Return the number (count) of vowels in the given string.
+         We will consider a, e, i, o, and u as vowels for this Kata.
+         The input string will only consist of lower case letters and/or spaces.
+        EXAMPLE:
+            accum("abcd") -> "A-Bb-Ccc-Dddd"
+            accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+            accum("cwAt") -> "C-Ww-Aaa-Tttt"
+        NOTES:
+            The parameter of accum is a string which includes only letters from a..z and A..Z.
+    */
+
+// var s = 'ZpglnRxqenU';
+//
+//
+// var funzione = accum(s);
+// console.log(funzione);
+//
+// function accum(s) {
+//     var strAccum = '';
+//
+//     for (var i = 0; i < s.length; i++) {
+//         strAccum += s[i].toUpperCase();
+//         var lowerCaseLetter = s[i].toLowerCase();
+//
+//         for (var j = 0; j <= (i - 1); j++) {
+//             strAccum += lowerCaseLetter;
+//         }
+//
+//         if (i < s.length - 1) {
+//             strAccum += '-';
+//         }
+//     }
+//
+//     return strAccum;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 50. Highest and Lowest from string
+
+        >In this little assignment you are given a string of space separated numbers,
+         and have to return the highest and lowest number.
+        EXAMPLE:
+            highAndLow("1 2 3 4 5");  // return "5 1"
+            highAndLow("1 2 -3 4 5"); // return "5 -3"
+            highAndLow("1 9 3 4 -5"); // return "9 -5"
+        NOTES:
+            All numbers are valid Int32, no need to validate them.
+            There will always be at least one number in the input string.
+            Output string must be two numbers separated by a single space, and highest number is first.
+
+    */
+
+// var numbers = "8 16 -15 21 56 -4";
+//
+// var funzione = highAndLow(numbers);
+// console.log(funzione);
+//
+//
+// function highAndLow(numbers) {
+//     var arrayNumbers = numbersStringToArray(numbers);
+//
+//     var minNumber = arrayNumbers[0];
+//     var maxNumber = arrayNumbers[0];
+//
+//     for (var i = 0; i < arrayNumbers.length; i++) {
+//         if (arrayNumbers[i] > maxNumber) {
+//             maxNumber = arrayNumbers[i];
+//         } else if (arrayNumbers[i] < minNumber) {
+//             minNumber = arrayNumbers[i];
+//         }
+//     }
+//
+//     return maxNumber + ' ' + minNumber;
+// }
+//
+// function numbersStringToArray(numbers) {        // questa funzione prende una stringa con numeri e la trasforma in un array
+//     var arrayNumbers = numbers.split(" ").map(Number);
+//
+//     return arrayNumbers;
+// }
+//  // METODO ALTERNATIVO
+// function numbersStringToArray(numbers) { // (non volendo usare lo split e volendosi complicare la vita) questa funzione prende una stringa con numeri e la trasforma in un array
+//     var arrayNumbers = [];
+//     var numberLength = 0;
+//
+//     for (var i = 0; i < numbers.length; i++) {      // ciclo nella stringa
+//
+//         if (numbers[i] == '-' || !isNaN(parseInt(numbers[i]))) {    // se l'iesimo e' un meno (-) oppure un numero aumento il contatore di 1
+//             numberLength++;
+//         } else {                                                    // quando c'e' uno spazio
+//             var number = '';
+//             for (var k = (i - numberLength); k < i; k++) {          // torno indietro nella stringa 'numbers' di 'numberLength' posizioni
+//                 number += numbers[k];                               // e ad ogni ciclo prendo il carattere e lo aggiungo alla variabile numero fino a che non raggiungo 'i'
+//             }
+//             arrayNumbers.push(parseInt(number));                    // inserisco nell'array il numero
+//             numberLength = 0;                                       // resetto il contatore lunghezza numero
+//         }
+//
+//         if (i == numbers.length - 1) {                              // se sono arrivato alla fine della stringa devo fare alcune modifiche al ciclo for
+//             var number = '';                                        // dato che la i non coincide piu' con uno spazio
+//             for (var k = (i - numberLength + 1); k <= i; k++) {
+//                 number += numbers[k];
+//             }
+//             arrayNumbers.push(parseInt(number));
+//             numberLength = 0;
+//         }
+//     }
+//
+//     return arrayNumbers;
 // }
 //-----------------------------------------------------------------------------------------------------
 

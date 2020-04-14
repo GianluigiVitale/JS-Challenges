@@ -26,7 +26,7 @@ _The challenges are organized in a chronological order_
 18. Matchstick Houses
 19. Find the Smallest and Biggest Numbers
 20. Check if One Array can be Nested in Another
-21. Find the Smallest and Biggest Numbers (part 2)
+21. Equal sign
 22. altERnaTIng cAsE <=> ALTerNAtiNG CaSe
 23. Is the string uppercase?
 24. Sum of positive
@@ -53,3 +53,6 @@ _The challenges are organized in a chronological order_
 45. Removing Elements
 46. Practice creating a binary search algorithm
 47. Rotate an array
+48. Vowel Count
+49. Mumbling
+50. Highest and Lowest from string
