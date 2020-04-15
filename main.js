@@ -1919,6 +1919,122 @@
 // }
 //-----------------------------------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------------------------------
+    /* 65. String incrementer
+
+        >Your job is to write a function which increments a string, to create a new string.
+         If the string already ends with a number, the number should be incremented by 1.
+         If the string does not end with a number. the number 1 should be appended to the new string.
+        EXAMPLE:
+            foo -> foo1
+            foobar23 -> foobar24
+            foo0042 -> foo0043
+            foo9 -> foo10
+            foo099 -> foo100
+        NOTES:
+            If the number has leading zeros the amount of digits should be considered.
+    */
+
+// var strng = 'foobar000';
+//
+//
+// var funzione = incrementString(strng);
+// console.log(funzione);
+//
+// function incrementString(strng) {
+//     var numberStr = '';
+//     var word = '';
+//
+//     for (var i = 0; i < strng.length; i++) {    // separate numbers from char
+//         if (!isNaN(strng[i])) {
+//             numberStr += strng[i];
+//         } else {
+//             word += strng[i]
+//         }
+//     }
+//     if (numberStr == '') {
+//         return word + '1';
+//     }
+//
+//     var numbers = parseInt(numberStr) + 1;      // add a number and convert to a string
+//     var numberString = numbers.toString();
+//
+//     var numberToAdd = '';
+//
+//     if (numberString.length < numberStr.length) {   // if the new number has less digit than the orgiginal
+//         var differenceLength = numberStr.length - numberString.length;
+//
+//         var newNumbers = '';
+//         for (var i = 1; i <= differenceLength; i++) {   // I add as many 0 as the difference
+//             newNumbers += '0';
+//         }
+//         newNumbers += numberString;
+//         numberToAdd = newNumbers;
+//     } else {
+//         numberToAdd = numberString;
+//     }
+//
+//     return word + numberToAdd;
+// }
+//-----------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------
+    /* 66. Vasya - Clerk
+
+        >The new "Avengers" movie has just been released! There are a lot of people at the cinema box office standing in a huge line.
+         Each of them has a single 100, 50 or 25 dollar bill. An "Avengers" ticket costs 25 dollars.
+
+         Vasya is currently working as a clerk. He wants to sell a ticket to every single person in this line.
+
+         Can Vasya sell a ticket to every person and give change if he initially has no money and sells the tickets strictly in the order people queue?
+
+         Return YES, if Vasya can sell a ticket to every person and give change with the bills he has at hand at that moment. Otherwise return NO.
+         You may assume the parameter is positive.
+        EXAMPLE:
+        tickets([25, 25, 50]) // => YES
+        tickets([25, 100]) // => NO. Vasya will not have enough money to give change to 100 dollars
+        tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to give 75 dollars of change (you can't make two bills of 25 from one of 50)
+        NOTES:
+    */
+
+// var peopleInLine = [25, 25, 25, 25, 50, 100, 50];
+//
+//
+// var funzione = tickets(peopleInLine);
+// console.log(funzione);
+//
+// function tickets(peopleInLine) {
+//     var money = {
+//         25: 0,
+//         50: 0,
+//         100: 0
+//     }
+//
+//     for (var i = 0; i < peopleInLine.length; i++) {
+//         var billX = peopleInLine[i];
+//         money[billX]++;
+//
+//         if (billX == 50) {
+//             money[25]--;
+//             if (money[25] < 0) {
+//                 return 'NO';
+//             }
+//         } else if (billX == 100) {
+//             if (money[50] >= 1 && money[25] >= 1) {
+//                 money[50]--;
+//                 money[25]--;
+//             } else if (money[25] >= 3) {
+//                 money[25] += -3;
+//             } else {
+//                 return 'NO';
+//             }
+//         }
+//     }
+//
+//     return 'YES';
+// }
+//-----------------------------------------------------------------------------------------------------
+
 
 
 

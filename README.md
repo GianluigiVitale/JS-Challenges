@@ -70,3 +70,5 @@ _The challenges are organized in a chronological order_
 62. Credit Card Mask
 63. Sum of odd numbers
 64. Find the next perfect square!
+65. String incrementer
+66. Vasya - Clerk
