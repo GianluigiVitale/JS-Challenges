@@ -1,98 +1,100 @@
     // 8kyu
 //-----------------------------------------------------------------------------------------------------
 	// 1. Reverse Array
-// var array = [8,2,5,9,7,3,6,2]
-// var arrayReversed = reverseArrayInPlace(array);
-// console.log(arrayReversed);
+var array = [8,2,5,9,7,3,6,2]
+var arrayReversed = reverseArrayInPlace(array);
+console.log(arrayReversed);
 
-//	array.reverse(); 	// questo sotto e' come funziona reverse()
+function reverseArrayInPlace(array) {
+    return  array.reverse();
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	// 2. Power of number
-// var base = 5;
-// var exponent = 5;
-//
-// var funzione = power(base, exponent);
-// console.log(funzione);
-//
-// function power(base, exponent) {
-// 	var number = 1;
-//
-// 	for (var i = 1; i <= exponent; i++) {
-// 		number = number * base;
-// 	}
-//
-// 	return number;
-// }
+var base = 5;
+var exponent = 5;
+
+var funzione = power(base, exponent);
+console.log(funzione);
+
+function power(base, exponent) {
+	var number = 1;
+
+	for (var i = 1; i <= exponent; i++) {
+		number = number * base;
+	}
+
+	return number;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	// 3. Maximum edge of triangle
-// var side1 = 7;
-// var side2 = 9;
-//
-// var funzione = nextEdge(side1, side2);
-// console.log(funzione)
-//
-// function nextEdge(side1, side2) {
-// 	var maximumEdge = (side1 + side2) - 1;
-// 	return maximumEdge;
-// }
+var side1 = 7;
+var side2 = 9;
+
+var funzione = nextEdge(side1, side2);
+console.log(funzione)
+
+function nextEdge(side1, side2) {
+	var maximumEdge = (side1 + side2) - 1;
+	return maximumEdge;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	// 4. Return the Last Element in an Array
 		// Create a function that accepts an array and returns the last item in the array.
 
-// var arr = [1,2,3,4,5];
-// var funzione = getLastItem(arr);
-// console.log(funzione)
-//
-//
-// function getLastItem(arr) {
-// 	var numberLastItemArray = arr.length - 1;
-// 	return arr[numberLastItemArray];
-// }
+var arr = [1,2,3,4,5];
+var funzione = getLastItem(arr);
+console.log(funzione)
+
+
+function getLastItem(arr) {
+	var numberLastItemArray = arr.length - 1;
+	return arr[numberLastItemArray];
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	// 5. Find the Perimeter of a Rectangle
 		// Create a function that takes height and width and finds the perimeter of a rectangle.
 
-// var height = 20;
-// var width = 10;
-// var funzione = findPerimeter(height, width);
-// console.log(funzione)
-//
-//
-// function findPerimeter(height, width) {
-// 	var perimeter = (height + width) * 2;
-// 	return perimeter;
-// }
+var height = 20;
+var width = 10;
+var funzione = findPerimeter(height, width);
+console.log(funzione)
+
+
+function findPerimeter(height, width) {
+	var perimeter = (height + width) * 2;
+	return perimeter;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
-	// 6. Say "Hello" Say "Bye"
+	// 6. Say Hello Say Bye
 		// Write a function that takes a string name and a number num (either 0 or 1)
 		// and return "Hello" + name if num is 1, otherwise return "Bye" + name.
 		// The name you return must be capitalized.
 
-// var name = 'giorgio';
-// var num = 0;
-// var funzione = sayHelloBye(name, num);
-// console.log(funzione)
-//
-//
-// function sayHelloBye(name, num) {
-// 	var stringCapitalized = name[0].toUpperCase() + name.substring(1);			// da ricordare .toUpperCase() .substring()
-//
-// 	if (num == 1) {
-// 		return "Hello " + stringCapitalized;
-// 	} else {
-// 		return "Bye " + stringCapitalized;
-// 	}
-// }
+var name = 'giorgio';
+var num = 0;
+var funzione = sayHelloBye(name, num);
+console.log(funzione)
+
+
+function sayHelloBye(name, num) {
+	var stringCapitalized = name[0].toUpperCase() + name.substring(1);			// da ricordare .toUpperCase() .substring()
+
+	if (num == 1) {
+		return "Hello " + stringCapitalized;
+	} else {
+		return "Bye " + stringCapitalized;
+	}
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -101,76 +103,76 @@
 	 	NOTES: FPS stands for "frames per second" and it's the number of frames a computer screen shows every second.
 			   Assume the screen produces 60 frames every second. */
 
-// var minutes = 99;
-// var fps = 1;
-//
-// var funzione = frames(minutes, fps);
-// console.log(funzione)
-//
-//
-// function frames(minutes, fps) {
-// 	var fps = minutes * fps * 60
-// 	return fps;
-// }
+var minutes = 99;
+var fps = 1;
+
+var funzione = frames(minutes, fps);
+console.log(funzione)
+
+
+function frames(minutes, fps) {
+	var fps = minutes * fps * 60
+	return fps;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	// 8. Concatenating Two Integer Arrays
 	/* Create a function to concatenate two integer arrays */
 
-// var arr1 = [1, 3, 5];
-// var arr2 = [2, 6, 8];
-//
-// var funzione = concat(arr1, arr2);
-// console.log(funzione)
-//
-//
-// function concat(arr1, arr2) {
-// 	var array1and2 = arr1;
-// 	for (var i = 0; i < arr2.length; i++) {
-// 		array1and2.push(arr2[i]);
-// 	}
-//
-// 	return array1and2;
-// }
+var arr1 = [1, 3, 5];
+var arr2 = [2, 6, 8];
+
+var funzione = concat(arr1, arr2);
+console.log(funzione)
+
+
+function concat(arr1, arr2) {
+	var array1and2 = arr1;
+	for (var i = 0; i < arr2.length; i++) {
+		array1and2.push(arr2[i]);
+	}
+
+	return array1and2;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	// 9. Check if an Integer is Divisible By Five
 	/* Create a function that returns true if an integer is evenly divisible by 5, and false otherwise. */
 
-// var n = 7;
-//
-// var funzione = divisibleByFive(n);
-// console.log(funzione)
-//
-//
-// function divisibleByFive(n) {
-// 	if (n % 5 == 0) {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// }
+var n = 7;
+
+var funzione = divisibleByFive(n);
+console.log(funzione)
+
+
+function divisibleByFive(n) {
+	if (n % 5 == 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
-	// 10. Is the Number Even or Odd?
+	// 10. Is the Number Even or Odd
 	/* Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers. */
 
-// var num = 12;
-//
-// var funzione = isEvenOrOdd(num);
-// console.log(funzione)
-//
-//
-// function isEvenOrOdd(num) {
-// 	if (num % 2 == 0) {
-// 		return 'even';
-// 	} else {
-// 		return 'odd';
-// 	}
-// }
+var num = 12;
+
+var funzione = isEvenOrOdd(num);
+console.log(funzione)
+
+
+function isEvenOrOdd(num) {
+	if (num % 2 == 0) {
+		return 'even';
+	} else {
+		return 'odd';
+	}
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -179,20 +181,20 @@
 		true or false depending on whether the total number of characters in the first
 		string is equal to the total number of characters in the second string. */
 
-// var str1 = 'ciao1';
-// var str2 = 'ciao';
-//
-// var funzione = comp(str1, str2);
-// console.log(funzione)
-//
-//
-// function comp(str1, str2) {
-// 	if (str1.length == str2.length) {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// }
+var str1 = 'ciao1';
+var str2 = 'ciao';
+
+var funzione = comp(str1, str2);
+console.log(funzione)
+
+
+function comp(str1, str2) {
+	if (str1.length == str2.length) {
+		return true;
+	} else {
+		return false;
+	}
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -203,41 +205,41 @@
 
  	*/
 
-// var sizes = {width: 11,length: 1,height: 2}
-//
-// var funzione = volumeOfBox(sizes);
-// console.log(funzione)
-//
-//
-// function volumeOfBox(sizes) {
-// 	var volume = 1;
-// 	for (var key in sizes) {
-// 		volume = volume * sizes[key];
-// 	}
-//
-// 	return volume;
-// }
+var sizes = {width: 11,length: 1,height: 2}
+
+var funzione = volumeOfBox(sizes);
+console.log(funzione)
+
+
+function volumeOfBox(sizes) {
+	var volume = 1;
+	for (var key in sizes) {
+		volume = volume * sizes[key];
+	}
+
+	return volume;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	// 13. Find the Index
 	/*  Create a function that takes an array and a string as arguments and return the index of the string.*/
 
-// var arr = ['abc', 'ghj', 'banana', 'grape'];
-// var str = 'grape';
-//
-// var funzione = findIndex(arr, str);
-// console.log(funzione)
-//
-//
-// function findIndex(arr, str) {
-// 	for (var i = 0; i < arr.length; i++) {
-// 		if (arr[i] == str) {
-// 			var strIndex = i;
-// 		}
-// 	}
-// 	return strIndex
-// }
+var arr = ['abc', 'ghj', 'banana', 'grape'];
+var str = 'grape';
+
+var funzione = findIndex(arr, str);
+console.log(funzione)
+
+
+function findIndex(arr, str) {
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] == str) {
+			var strIndex = i;
+		}
+	}
+	return strIndex
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------     // DA RIGUARDARE
@@ -246,32 +248,32 @@
 		NOTES: 	A string with a single character is trivially counted as a string with repeating identical characters.
 				If there are no strings with repeating identical characters, return an empty array (see example #3).*/
 
-// var arr = ['1', '22', '3'];
-//
-// var funzione = identicalFilter(arr);
-// console.log(funzione)
-//
-//
-// function identicalFilter(arr) {
-// 	var arraySingleChar = [];
-//
-// 	for (var i = 0; i < arr.length; i++) {
-// 		var repeatingString = false;
-//
-// 		var lengthString = arr[i].length;
-//
-// 		for (var j = 0; j < (lengthString - 1); j++) {
-// 			var chartString = arr[i][j];
-// 			if (chartString != arr[i][j+1]) {
-// 				repeatingString = true;
-// 			}
-// 		}
-// 		if (repeatingString == false) {
-// 			arraySingleChar.push(arr[i]);
-// 		}
-// 	}
-// 	return arraySingleChar;
-// }
+var arr = ['1', '22', '3'];
+
+var funzione = identicalFilter(arr);
+console.log(funzione)
+
+
+function identicalFilter(arr) {
+	var arraySingleChar = [];
+
+	for (var i = 0; i < arr.length; i++) {
+		var repeatingString = false;
+
+		var lengthString = arr[i].length;
+
+		for (var j = 0; j < (lengthString - 1); j++) {
+			var chartString = arr[i][j];
+			if (chartString != arr[i][j+1]) {
+				repeatingString = true;
+			}
+		}
+		if (repeatingString == false) {
+			arraySingleChar.push(arr[i]);
+		}
+	}
+	return arraySingleChar;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -280,37 +282,37 @@
 		For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
 		NOTES: 	You can expect only integers ranging from 1 to 12 as test input. */
 
-// var num = 12;
-//
-// var funzione = monthName(num);
-// console.log(funzione)
-//
-// function monthName(num) {
-// 	var arrayMonth = ['January', 'February', 'March', 'April', 'May', 'June',
-// 	'July', 'August', 'September', 'October', 'November', 'December'];
-// 	return arrayMonth[num-1];
-// }
+var num = 12;
+
+var funzione = monthName(num);
+console.log(funzione)
+
+function monthName(num) {
+	var arrayMonth = ['January', 'February', 'March', 'April', 'May', 'June',
+	'July', 'August', 'September', 'October', 'November', 'December'];
+	return arrayMonth[num-1];
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
 	/* 16. Reverse and Capitalize
 		>Create a function that takes a string of lowercase characters and returns that string reversed and in upper case.*/
 
-// var str = 'CIAO';
-//
-// var funzione = reverseCapitalize(str);
-// console.log(funzione)
-//
-// function reverseCapitalize(str) {
-// 	var newStringReversed = '';
-//
-// 	for (var i = (str.length - 1); i >= 0; i--) {
-// 		newStringReversed += str[i];
-// 	}
-//
-// 	var newStringCapitalized = newStringReversed.toUpperCase();
-// 	return newStringCapitalized;
-// }
+var str = 'CIAO';
+
+var funzione = reverseCapitalize(str);
+console.log(funzione)
+
+function reverseCapitalize(str) {
+	var newStringReversed = '';
+
+	for (var i = (str.length - 1); i >= 0; i--) {
+		newStringReversed += str[i];
+	}
+
+	var newStringCapitalized = newStringReversed.toUpperCase();
+	return newStringCapitalized;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -321,18 +323,18 @@
 		NOTES: Expect any positive number between 1 and 1000.
 	*/
 
-// var num = 4;
-//
-// var funzione = addUp(num);
-// console.log(funzione)
-//
-// function addUp(num) {
-// 	var sum = 0;
-// 	for (var i = 1; i <= num; i++) {
-// 		sum += i;
-// 	}
-// 	return sum;
-// }
+var num = 4;
+
+var funzione = addUp(num);
+console.log(funzione)
+
+function addUp(num) {
+	var sum = 0;
+	for (var i = 1; i <= num; i++) {
+		sum += i;
+	}
+	return sum;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -344,18 +346,18 @@
 				The input (step) will always be a non-negative integer.
 	*/
 
-// var step = 87;
-//
-// var funzione = matchHouses(step);
-// console.log(funzione)
-//
-// function matchHouses(step) {
-// 	if (step == 0) {
-// 		return 0;
-// 	} else {
-// 		return (5 * step) + 1;
-// 	}
-// }
+var step = 87;
+
+var funzione = matchHouses(step);
+console.log(funzione)
+
+function matchHouses(step) {
+	if (step == 0) {
+		return 0;
+	} else {
+		return (5 * step) + 1;
+	}
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -363,29 +365,29 @@
 		>Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
 	*/
 
-// var arr = [14, 35, 6, 1, 34, 54];
-//
-// var funzione = minMax(arr);
-// console.log(funzione)
-//
-// function minMax(arr) {
-// 	var arrayMinMax = [];
-// 	var maxNum = arr[0];
-// 	var minNum = arr[0];
-//
-// 	for (var i = 0; i < arr.length; i++) {
-// 		if (arr[i] > maxNum) {
-// 			maxNum = arr[i];
-// 		}
-// 		if (arr[i] < minNum) {
-// 			minNum = arr[i];
-// 		}
-// 	}
-// 	arrayMinMax.push(minNum);
-// 	arrayMinMax.push(maxNum);
-//
-// 	return arrayMinMax;
-// }
+var arr = [14, 35, 6, 1, 34, 54];
+
+var funzione = minMax(arr);
+console.log(funzione)
+
+function minMax(arr) {
+	var arrayMinMax = [];
+	var maxNum = arr[0];
+	var minNum = arr[0];
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] > maxNum) {
+			maxNum = arr[i];
+		}
+		if (arr[i] < minNum) {
+			minNum = arr[i];
+		}
+	}
+	arrayMinMax.push(minNum);
+	arrayMinMax.push(maxNum);
+
+	return arrayMinMax;
+}
 //-----------------------------------------------------------------------------------------------------
 
 
@@ -397,40 +399,40 @@
 			arr1's max is less than arr2's max.
 	*/
 
-// var arr1 = [3, 1];
-// var arr2 = [4, 0];
-//
-// var funzione = canNest(arr1, arr2);
-// console.log(funzione)
-//
-// function canNest(arr1, arr2) {
-// 	var minMaxArray1 = getMinMaxArray(arr1);
-// 	var minMaxArray2 = getMinMaxArray(arr2);
-//
-// 	if ((minMaxArray1.minNum > minMaxArray2.minNum) && (minMaxArray1.maxNum < minMaxArray2.maxNum)) {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// }
-//
-// function getMinMaxArray(array) {
-// 	var maxNum = array[0];
-// 	var minNum = array[0];
-// 	for (var i = 0; i < array.length; i++) {
-// 		if (array[i] > maxNum) {
-// 			maxNum = array[i];
-// 		}
-// 		if (array[i] < minNum) {
-// 			minNum = array[i];
-// 		}
-// 	}
-//
-// 	return {
-// 		maxNum: maxNum,
-// 		minNum: minNum
-// 	}
-// }
+var arr1 = [3, 1];
+var arr2 = [4, 0];
+
+var funzione = canNest(arr1, arr2);
+console.log(funzione)
+
+function canNest(arr1, arr2) {
+	var minMaxArray1 = getMinMaxArray(arr1);
+	var minMaxArray2 = getMinMaxArray(arr2);
+
+	if ((minMaxArray1.minNum > minMaxArray2.minNum) && (minMaxArray1.maxNum < minMaxArray2.maxNum)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function getMinMaxArray(array) {
+	var maxNum = array[0];
+	var minNum = array[0];
+	for (var i = 0; i < array.length; i++) {
+		if (array[i] > maxNum) {
+			maxNum = array[i];
+		}
+		if (array[i] < minNum) {
+			minNum = array[i];
+		}
+	}
+
+	return {
+		maxNum: maxNum,
+		minNum: minNum
+	}
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -439,45 +441,45 @@
          return false
     */
 
-// var n1 = -2;
-// var n2 = 6;
-//
-// var funzione = both(n1, n2);
-// console.log(funzione)
-//
-// function both(n1, n2) {
-//     if ((n1 > 0 && n2 > 0) || (n1 < 0 && n2 < 0) || (n1 == 0 && n2 == 0)) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+var n1 = -2;
+var n2 = 6;
+
+var funzione = both(n1, n2);
+console.log(funzione)
+
+function both(n1, n2) {
+    if ((n1 > 0 && n2 > 0) || (n1 < 0 && n2 < 0) || (n1 == 0 && n2 == 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
-    /* 22. altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+    /* 22. altERnaTIng cAsE to ALTerNAtiNG CaSe
         >each lowercase letter becomes uppercase and each uppercase letter becomes lowercase
         NOTES:
     */
 
-// var item = 'PiPPo';
-//
-// var funzione = alternateCase(item);
-// console.log(funzione);
-//
-// function alternateCase(item) {
-//     var stringSwitch = '';
-//
-//     for (var i = 0; i < item.length; i++) {
-//         if (item[i] == item[i].toLowerCase()) {
-//             stringSwitch += item[i].toUpperCase();
-//         } else {
-//             stringSwitch += item[i].toLowerCase();
-//         }
-//     }
-//
-//     return stringSwitch;
-// }
+var item = 'PiPPo';
+
+var funzione = alternateCase(item);
+console.log(funzione);
+
+function alternateCase(item) {
+    var stringSwitch = '';
+
+    for (var i = 0; i < item.length; i++) {
+        if (item[i] == item[i].toLowerCase()) {
+            stringSwitch += item[i].toUpperCase();
+        } else {
+            stringSwitch += item[i].toLowerCase();
+        }
+    }
+
+    return stringSwitch;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -487,18 +489,18 @@
         NOTES:
     */
 
-// var str = '';
-//
-// var funzione = upperCaseCheck(str);
-// console.log(funzione);
-//
-// function upperCaseCheck(str) {
-//     if (str == str.toUpperCase()) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+var str = '';
+
+var funzione = upperCaseCheck(str);
+console.log(funzione);
+
+function upperCaseCheck(str) {
+    if (str == str.toUpperCase()) {
+        return true;
+    } else {
+        return false;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -507,22 +509,22 @@
         NOTES:
     */
 
-// var arr = [1,-4,7,12];
-//
-// var funzione = positiveSum(arr);
-// console.log(funzione);
-//
-// function positiveSum(arr) {
-//     var sum = 0;
-//
-//     for (var i = 0; i < arr.length; i++) {
-//         if (arr[i] > 0) {
-//             sum += arr[i];
-//         }
-//     }
-//
-//     return sum;
-// }
+var arr = [1,-4,7,12];
+
+var funzione = positiveSum(arr);
+console.log(funzione);
+
+function positiveSum(arr) {
+    var sum = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            sum += arr[i];
+        }
+    }
+
+    return sum;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -531,14 +533,14 @@
         NOTES:
     */
 
-// var number = 5;
-//
-// var funzione = opposite(number);
-// console.log(funzione);
-//
-// function opposite(number) {
-//     return number * -1;
-// }
+var number = 5;
+
+var funzione = opposite(number);
+console.log(funzione);
+
+function opposite(number) {
+    return number * -1;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -549,14 +551,14 @@
         NOTES:
     */
 
-// var str = 'bella';
-//
-// var funzione = removeChar(str);
-// console.log(funzione);
-//
-// function removeChar(str) {
-//     return str.substring(1, (str.length - 1));
-// }
+var str = 'bella';
+
+var funzione = removeChar(str);
+console.log(funzione);
+
+function removeChar(str) {
+    return str.substring(1, (str.length - 1));
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -566,18 +568,18 @@
         NOTES:
     */
 
-// var num = -40;
-//
-// var funzione = makeNegative(num);
-// console.log(funzione);
-//
-// function makeNegative(num) {
-//     if (num > 0) {
-//         return num * -1;
-//     } else {
-//         return num;
-//     }
-// }
+var num = -40;
+
+var funzione = makeNegative(num);
+console.log(funzione);
+
+function makeNegative(num) {
+    if (num > 0) {
+        return num * -1;
+    } else {
+        return num;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -587,21 +589,21 @@
         NOTES:
     */
 
-// var n = 5;
-// var s = 'Hello';
-//
-// var funzione = repeatStr(n, s);
-// console.log(funzione);
-//
-// function repeatStr(n, s) {
-//     var repeatedString = '';
-//
-//     for (var i = 1; i <= n; i++) {
-//         repeatedString += s;
-//     }
-//
-//     return repeatedString;
-// }
+var n = 5;
+var s = 'Hello';
+
+var funzione = repeatStr(n, s);
+console.log(funzione);
+
+function repeatStr(n, s) {
+    var repeatedString = '';
+
+    for (var i = 1; i <= n; i++) {
+        repeatedString += s;
+    }
+
+    return repeatedString;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -610,22 +612,22 @@
         NOTES:
     */
 
-// var x = 'Hello HolaCiao';
-//
-// var funzione = noSpace(x);
-// console.log(funzione);
-//
-// function noSpace(x) {
-//     var noSpaceStr = '';
-//
-//     for (var i = 0; i < x.length; i++) {
-//         if (x[i] != ' ') {
-//             noSpaceStr += x[i];
-//         }
-//     }
-//
-//     return noSpaceStr;
-// }
+var x = 'Hello HolaCiao';
+
+var funzione = noSpace(x);
+console.log(funzione);
+
+function noSpace(x) {
+    var noSpaceStr = '';
+
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] != ' ') {
+            noSpaceStr += x[i];
+        }
+    }
+
+    return noSpaceStr;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -634,22 +636,22 @@
         NOTES:
     */
 
-// var arr = [34, -345, -1, 100];
-//
-// var funzione = minMax(arr);
-// console.log(funzione);
-//
-// function minMax(arr) {
-// 	var minNum = arr[0];
-//
-// 	for (var i = 0; i < arr.length; i++) {
-// 		if (arr[i] < minNum) {
-// 			minNum = arr[i];
-// 		}
-// 	}
-//
-// 	return minNum;
-// }
+var arr = [34, -345, -1, 100];
+
+var funzione = minMax(arr);
+console.log(funzione);
+
+function minMax(arr) {
+	var minNum = arr[0];
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] < minNum) {
+			minNum = arr[i];
+		}
+	}
+
+	return minNum;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -659,20 +661,20 @@
         NOTES:
     */
 
-// var n = 3;
-// var x = 3;
-// var y = 4;
-//
-// var funzione = isDivisible(n, x, y);
-// console.log(funzione);
-//
-// function isDivisible(n, x, y) {
-//     if ((n % x == 0) && (n % y == 0)) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+var n = 3;
+var x = 3;
+var y = 4;
+
+var funzione = isDivisible(n, x, y);
+console.log(funzione);
+
+function isDivisible(n, x, y) {
+    if ((n % x == 0) && (n % y == 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -686,18 +688,18 @@
         NOTES:
     */
 
-// var haystack = ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false];
-//
-// var funzione = findNeedle(haystack);
-// console.log(funzione);
-//
-// function findNeedle(haystack) {
-//     for (var i = 0; i < haystack.length; i++) {
-//         if (haystack[i] == 'needle') {
-//             return "found the needle at position " + i;
-//         }
-//     }
-// }
+var haystack = ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false];
+
+var funzione = findNeedle(haystack);
+console.log(funzione);
+
+function findNeedle(haystack) {
+    for (var i = 0; i < haystack.length; i++) {
+        if (haystack[i] == 'needle') {
+            return "found the needle at position " + i;
+        }
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -708,31 +710,31 @@
         NOTES:
     */
 
-// var a = [4,5,6];
-// var b = [1,2,3];
-//
-// var funzione = arrayMadness(a, b);
-// console.log(funzione);
-//
-// function arrayMadness(a, b) {
-//     var squareA = 0;
-//     var squareB = 0;
-//
-//     for (var i = 0; i < a.length; i++) {
-//         var squareI = Math.pow(a[i], 2);
-//         squareA += squareI;
-//     }
-//     for (var i = 0; i < b.length; i++) {
-//         var squareI = Math.pow(b[i], 3);
-//         squareB += squareI;
-//     }
-//
-//     if (squareA > squareB) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+var a = [4,5,6];
+var b = [1,2,3];
+
+var funzione = arrayMadness(a, b);
+console.log(funzione);
+
+function arrayMadness(a, b) {
+    var squareA = 0;
+    var squareB = 0;
+
+    for (var i = 0; i < a.length; i++) {
+        var squareI = Math.pow(a[i], 2);
+        squareA += squareI;
+    }
+    for (var i = 0; i < b.length; i++) {
+        var squareI = Math.pow(b[i], 3);
+        squareB += squareI;
+    }
+
+    if (squareA > squareB) {
+        return true;
+    } else {
+        return false;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -752,43 +754,43 @@
         NOTES:
     */
 
-// var string = "Jędrzej Błądziński";
-//
-// var funzione = correctPolishLetters(string);
-// console.log(funzione);
-//
-// function correctPolishLetters(string) {
-//     var polishDiacritics = {
-//         ą: 'a',
-//         ć: 'c',
-//         ę: 'e',
-//         ł: 'l',
-//         ń: 'n',
-//         ó: 'o',
-//         ś: 's',
-//         ź: 'z',
-//         ż: 'z'
-//     }
-//
-//     var newString = '';
-//
-//     for (var i = 0; i < string.length; i++) {
-//         var modifyChar = false;
-//
-//         for (var key in polishDiacritics) {
-//             if (string[i] == key) {
-//                 newString += polishDiacritics[key]
-//                 modifyChar = true;
-//             }
-//         }
-//
-//         if (modifyChar == false) {
-//             newString += string[i]
-//         }
-//     }
-//
-//     return newString;
-// }
+var string = "Jędrzej Błądziński";
+
+var funzione = correctPolishLetters(string);
+console.log(funzione);
+
+function correctPolishLetters(string) {
+    var polishDiacritics = {
+        ą: 'a',
+        ć: 'c',
+        ę: 'e',
+        ł: 'l',
+        ń: 'n',
+        ó: 'o',
+        ś: 's',
+        ź: 'z',
+        ż: 'z'
+    }
+
+    var newString = '';
+
+    for (var i = 0; i < string.length; i++) {
+        var modifyChar = false;
+
+        for (var key in polishDiacritics) {
+            if (string[i] == key) {
+                newString += polishDiacritics[key]
+                modifyChar = true;
+            }
+        }
+
+        if (modifyChar == false) {
+            newString += string[i]
+        }
+    }
+
+    return newString;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -806,27 +808,27 @@
         NOTES:
     */
 
-// var arrayOfSheep = [true,  true,  true,  false,
-//                     true,  true,  true,  true ,
-//                     true,  false, true,  false,
-//                     true,  false, false, true ,
-//                     true,  true,  true,  true ,
-//                     false, false, true,  true ];
-//
-// var funzione = countSheeps(arrayOfSheep);
-// console.log(funzione);
-//
-// function countSheeps(arrayOfSheep) {
-//     var sheepCount = 0;
-//
-//     for (var i = 0; i < arrayOfSheep.length; i++) {
-//         if (arrayOfSheep[i] === true) {
-//             sheepCount += 1;
-//         }
-//     }
-//
-//     return sheepCount;
-// }
+var arrayOfSheep = [true,  true,  true,  false,
+                    true,  true,  true,  true ,
+                    true,  false, true,  false,
+                    true,  false, false, true ,
+                    true,  true,  true,  true ,
+                    false, false, true,  true ];
+
+var funzione = countSheeps(arrayOfSheep);
+console.log(funzione);
+
+function countSheeps(arrayOfSheep) {
+    var sheepCount = 0;
+
+    for (var i = 0; i < arrayOfSheep.length; i++) {
+        if (arrayOfSheep[i] === true) {
+            sheepCount += 1;
+        }
+    }
+
+    return sheepCount;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -843,29 +845,29 @@
         NOTES:
     */
 
-// var operation = '+';
-// var value1 = 4;
-// var value2 = 7;
-//
-// var funzione = basicOp(operation, value1, value2);
-// console.log(funzione);
-//
-// function basicOp(operation, value1, value2) {
-//     switch (operation) {
-//         case '+':
-//             return value1 + value2
-//             break;
-//         case '-':
-//             return value1 - value2
-//             break;
-//         case '*':
-//             return value1 * value2
-//             break;
-//         case '/':
-//             return value1 / value2
-//             break;
-//     }
-// }
+var operation = '+';
+var value1 = 4;
+var value2 = 7;
+
+var funzione = basicOp(operation, value1, value2);
+console.log(funzione);
+
+function basicOp(operation, value1, value2) {
+    switch (operation) {
+        case '+':
+            return value1 + value2
+            break;
+        case '-':
+            return value1 - value2
+            break;
+        case '*':
+            return value1 * value2
+            break;
+        case '/':
+            return value1 / value2
+            break;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -876,37 +878,37 @@
             http://i.imgur.com/aimOQVX.png
     */
 
-// var player1 = 'scissors';
-// var player2 = 'paper';
-//
-// var funzione = game(player1, player2);
-// console.log(funzione);
-//
-// function game(player1, player2) {
-//     if (player1 == player2) {
-//         return 'Draw!'
-//     } else {
-//         if (player1 == 'paper') {
-//             if (player2 == 'rock') {
-//                 return 'Player 1 won!';
-//             } else {
-//                 return 'Player 2 won!';
-//             }
-//         } else if (player1 == 'scissors') {
-//             if (player2 == 'paper') {
-//                 return 'Player 1 won!';
-//             } else {
-//                 return 'Player 2 won!';
-//             }
-//         } else if (player1 == 'rock') {
-//             if (player2 == 'scissors') {
-//                 return 'Player 1 won!';
-//             } else {
-//                 return 'Player 2 won!';
-//             }
-//         }
-//     }
-// }
+var player1 = 'scissors';
+var player2 = 'paper';
+
+var funzione = game(player1, player2);
+console.log(funzione);
+
+function game(player1, player2) {
+    if (player1 == player2) {
+        return 'Draw!'
+    } else {
+        if (player1 == 'paper') {
+            if (player2 == 'rock') {
+                return 'Player 1 won!';
+            } else {
+                return 'Player 2 won!';
+            }
+        } else if (player1 == 'scissors') {
+            if (player2 == 'paper') {
+                return 'Player 1 won!';
+            } else {
+                return 'Player 2 won!';
+            }
+        } else if (player1 == 'rock') {
+            if (player2 == 'scissors') {
+                return 'Player 1 won!';
+            } else {
+                return 'Player 2 won!';
+            }
+        }
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -923,26 +925,26 @@
             http://i.imgur.com/aimOQVX.png
     */
 
-// var message = 'Your solution';
-//
-// var funzione = charFreq(message);
-// console.log(funzione);
-//
-// function charFreq(message) {
-//     var dictionary = {};
-//
-//     for (var i = 0; i < message.length; i++) {
-//         var messageI = message[i];
-//         // console.log(messageI);
-//
-//         if (dictionary[messageI] === undefined) {
-//             dictionary[messageI] = 0;
-//         }
-//         dictionary[messageI] += 1;
-//     }
-//
-//     return dictionary;
-// }
+var message = 'Your solution';
+
+var funzione = charFreq(message);
+console.log(funzione);
+
+function charFreq(message) {
+    var dictionary = {};
+
+    for (var i = 0; i < message.length; i++) {
+        var messageI = message[i];
+        // console.log(messageI);
+
+        if (dictionary[messageI] === undefined) {
+            dictionary[messageI] = 0;
+        }
+        dictionary[messageI] += 1;
+    }
+
+    return dictionary;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -957,26 +959,26 @@
           centuryFromYear(2000)  returns (20)
     */
 
-// var year = 170005;
-// var funzione = century(year);
-// console.log(funzione);
-//
-// function century(year) {
-//     if (year <= 100) {
-//         return 1;
-//     } else {
-//         var yearStr = year.toString();
-//         var yearLast2Digits = yearStr.slice(-2);                        // .toString(), .slice(), .substring() remember
-//         var lengthStrYear = yearStr.length - 2;
-//
-//         if (yearLast2Digits == 00) {
-//             return parseInt(yearStr.slice(0, lengthStrYear));
-//         } else {
-//             return parseInt(yearStr.slice(0, lengthStrYear)) + 1;
-//         }
-//
-//     }
-// }
+var year = 170005;
+var funzione = century(year);
+console.log(funzione);
+
+function century(year) {
+    if (year <= 100) {
+        return 1;
+    } else {
+        var yearStr = year.toString();
+        var yearLast2Digits = yearStr.slice(-2);                        // .toString(), .slice(), .substring() remember
+        var lengthStrYear = yearStr.length - 2;
+
+        if (yearLast2Digits == 00) {
+            return parseInt(yearStr.slice(0, lengthStrYear));
+        } else {
+            return parseInt(yearStr.slice(0, lengthStrYear)) + 1;
+        }
+
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -987,25 +989,25 @@
           348597 => [7,9,5,8,4,3]
     */
 
-// var n = 35231;
-//
-// var funzione = digitize(n);
-// console.log(funzione);
-//
-// function digitize(n) {
-//     var numberToString = n.toString();
-//     var arrayNumberReversed = [];
-//
-//     for (var i = numberToString.length - 1; i >= 0; i--) {
-//         arrayNumberReversed.push(parseInt(numberToString[i]))
-//     }
-//
-//     return arrayNumberReversed;
-// }
+var n = 35231;
+
+var funzione = digitize(n);
+console.log(funzione);
+
+function digitize(n) {
+    var numberToString = n.toString();
+    var arrayNumberReversed = [];
+
+    for (var i = numberToString.length - 1; i >= 0; i--) {
+        arrayNumberReversed.push(parseInt(numberToString[i]))
+    }
+
+    return arrayNumberReversed;
+}
 //-----------------------------------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------------------------------     // DA RIGUARDARE
-    /* 41. Count of positives / sum of negatives
+//-----------------------------------------------------------------------------------------------------
+    /* 41. Count of positives - sum of negatives
 
         >Given an array of integers.Return an array, where the first element is
         the count of positives numbers and the second element is sum of negative numbers.
@@ -1014,32 +1016,32 @@
           For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
     */
 
-// var input = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14];
-//
-//
-// var funzione = countPositivesSumNegatives(input);
-// console.log(funzione);
-//
-// function countPositivesSumNegatives(input) {
-//     if (input === null || input.length == 0) {
-//         return [];
-//     }
-//
-//     var countPositiveNumber = 0;
-//     var sumNegativeNumber = 0;
-//
-//     for (var i = 0; i < input.length; i++) {
-//         if (input[i] > 0) {
-//             countPositiveNumber += 1;
-//         } else {
-//             sumNegativeNumber += input[i];
-//         }
-//     }
-//
-//     var arrayPosNeg = [countPositiveNumber, sumNegativeNumber];
-//
-//     return arrayPosNeg;
-// }
+var input = [0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14];
+
+
+var funzione = countPositivesSumNegatives(input);
+console.log(funzione);
+
+function countPositivesSumNegatives(input) {
+    if (input === null || input.length == 0) {
+        return [];
+    }
+
+    var countPositiveNumber = 0;
+    var sumNegativeNumber = 0;
+
+    for (var i = 0; i < input.length; i++) {
+        if (input[i] > 0) {
+            countPositiveNumber += 1;
+        } else {
+            sumNegativeNumber += input[i];
+        }
+    }
+
+    var arrayPosNeg = [countPositiveNumber, sumNegativeNumber];
+
+    return arrayPosNeg;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1058,21 +1060,21 @@
                 isSquare(26) returns  false
     */
 
-// var n = 26;
-//
-//
-// var funzione = isSquare(n);
-// console.log(funzione);
-//
-// function isSquare(n) {
-//     var sqrtN = Math.sqrt(n)
-//
-//     if (Number.isInteger(sqrtN)) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+var n = 26;
+
+
+var funzione = isSquare(n);
+console.log(funzione);
+
+function isSquare(n) {
+    var sqrtN = Math.sqrt(n)
+
+    if (Number.isInteger(sqrtN)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1096,32 +1098,32 @@
         So the maximum value that you can obtain is 9.
     */
 
-// var a = 1;
-// var b = 2;
-// var c = 3;
-//
-//
-// var funzione = expressionMatter(a, b, c);
-// console.log(funzione);
-//
-// function expressionMatter(a, b, c) {
-//     var combination1 = a + b + c;
-//     var combination2 = a * b * c;
-//     var combination3 = a * b + c;
-//     var combination4 = a + b * c;
-//     var combination5 = a * (b + c);
-//     var combination6 = (a + b) * c;
-//
-//     var maxNumber = Math.max(
-//         combination1,
-//         combination2,
-//         combination3,
-//         combination4,
-//         combination5,
-//         combination6,
-//     );
-//     return maxNumber;
-// }
+var a = 1;
+var b = 2;
+var c = 3;
+
+
+var funzione = expressionMatter(a, b, c);
+console.log(funzione);
+
+function expressionMatter(a, b, c) {
+    var combination1 = a + b + c;
+    var combination2 = a * b * c;
+    var combination3 = a * b + c;
+    var combination4 = a + b * c;
+    var combination5 = a * (b + c);
+    var combination6 = (a + b) * c;
+
+    var maxNumber = Math.max(
+        combination1,
+        combination2,
+        combination3,
+        combination4,
+        combination5,
+        combination6,
+    );
+    return maxNumber;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1134,19 +1136,19 @@
          Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
     */
 
-// var ages = [82, 15, 6, 38, 35];
-//
-//
-// var funzione = differenceInAges(ages);
-// console.log(funzione);
-//
-// function differenceInAges(ages) {
-//     var maxAge = Math.max(...ages);
-//     var minAge = Math.min(...ages);
-//     var differenceAge = maxAge - minAge;
-//
-//     return [minAge, maxAge, differenceAge];
-// }
+var ages = [82, 15, 6, 38, 35];
+
+
+var funzione = differenceInAges(ages);
+console.log(funzione);
+
+function differenceInAges(ages) {
+    var maxAge = Math.max(...ages);
+    var minAge = Math.min(...ages);
+    var differenceAge = maxAge - minAge;
+
+    return [minAge, maxAge, differenceAge];
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1159,70 +1161,70 @@
          myArr = ['Keep', 'Remove', 'Keep', 'Remove', 'Keep', ...];
     */
 
-// var arr = ['Hello', 'Goodbye', 'Hello Again'];
-//
-//
-// var funzione = removeEveryOther(arr);
-// console.log(funzione);
-//
-// function removeEveryOther(arr) {
-//     var newArr = [];
-//
-//     for (var i = 0; i < arr.length; i = i+2) {
-//         newArr.push(arr[i]);
-//     }
-//
-//     return newArr;
-// }
+var arr = ['Hello', 'Goodbye', 'Hello Again'];
+
+
+var funzione = removeEveryOther(arr);
+console.log(funzione);
+
+function removeEveryOther(arr) {
+    var newArr = [];
+
+    for (var i = 0; i < arr.length; i = i+2) {
+        newArr.push(arr[i]);
+    }
+
+    return newArr;
+}
 //-----------------------------------------------------------------------------------------------------
 
 
 //-----------------------------------------------------------------------------------------------------
         // 46. Practice creating a binary search algorithm
 
-// var numbers = [96, 58, 24, 30, 18, 32, 90, 63, 87, 56, 8, 15, 86, 74, 80, 99, 60,
-//                49, 97, 25, 77, 67, 57, 11, 95, 70, 7, 59, 19, 3, 23, 93, 66, 45,
-//                84, 21, 48, 83, 6, 16, 9];
-//
-// var arrClone = numbers;
-// var arrSorted = arrClone.sort(function(a, b){return a-b});
-// console.log(arrSorted);
-//
-// var t0 = performance.now();
-//
-// var posizioneX = binarySearch(arrSorted, 0, arrSorted.length - 1, 99);
-// console.log(posizioneX);
-//
-// var t1 = performance.now();
-// console.log('It took ' + (t1 - t0) + ' milliseconds');
+var numbers = [96, 58, 24, 30, 18, 32, 90, 63, 87, 56, 8, 15, 86, 74, 80, 99, 60,
+               49, 97, 25, 77, 67, 57, 11, 95, 70, 7, 59, 19, 3, 23, 93, 66, 45,
+               84, 21, 48, 83, 6, 16, 9];
 
-// function binarySearch(arr, l, r, x) {    // return the index of x (recursive)
-//     if (r >= l) {
-//         var mid = Math.floor(l + (r -l) / 2);
-//         if (arr[mid] == x) {
-//             return mid;
-//         } else if (arr[mid] > x) {
-//             return binarySearch(arr, l, mid - 1, x);
-//         } else {
-//             return binarySearch(arr, mid + 1, r, x);
-//         }
-//     } else {
-//         return -1;
-//     }
-// }
-// function binarySearch(arr, l, r, x) {    // return the index of x (iterative)
-//     while (l <= r) {
-//         var mid = Math.floor(l + (r -l) / 2);
-//         if (arr[mid] == x) {
-//             return mid;
-//         } else if (arr[mid] > x) {
-//             r = mid - 1;
-//         } else {
-//             l = mid + 1;
-//         }
-//     }
-//     return -1;
-// }
+var arrClone = numbers;
+var arrSorted = arrClone.sort(function(a, b){return a-b});
+console.log(arrSorted);
+
+var t0 = performance.now();
+
+var posizioneX = binarySearch(arrSorted, 0, arrSorted.length - 1, 99);
+console.log(posizioneX);
+
+var t1 = performance.now();
+console.log('It took ' + (t1 - t0) + ' milliseconds');
+
+function binarySearch(arr, l, r, x) {    // return the index of x (recursive)
+    if (r >= l) {
+        var mid = Math.floor(l + (r -l) / 2);
+        if (arr[mid] == x) {
+            return mid;
+        } else if (arr[mid] > x) {
+            return binarySearch(arr, l, mid - 1, x);
+        } else {
+            return binarySearch(arr, mid + 1, r, x);
+        }
+    } else {
+        return -1;
+    }
+}
+function binarySearch(arr, l, r, x) {    // return the index of x (iterative)
+    while (l <= r) {
+        var mid = Math.floor(l + (r -l) / 2);
+        if (arr[mid] == x) {
+            return mid;
+        } else if (arr[mid] > x) {
+            r = mid - 1;
+        } else {
+            l = mid + 1;
+        }
+    }
+    return -1;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1234,28 +1236,28 @@
                 arr[] = [3, 4, 5, 6, 7, 1, 2]
     */
 
-// var arr = [1, 2, 3, 4, 5, 6, 7];
-// var d = 2;
-//
-//
-// var funzione = leftRotate(arr, d);
-// console.log(funzione);
-//
-// function leftRotate(arr, d) {
-//     var arrFirstDElements = [];
-//     var restOfArray = [];
-//
-//     for (var i = 0; i < d; i++) {
-//         arrFirstDElements.push(arr[i])
-//     }
-//     for (var i = d; i < arr.length; i++) {
-//         restOfArray.push(arr[i])
-//     }
-//
-//     var rotatedArray = restOfArray.concat(arrFirstDElements);
-//
-//     return rotatedArray
-// }
+var arr = [1, 2, 3, 4, 5, 6, 7];
+var d = 2;
+
+
+var funzione = leftRotate(arr, d);
+console.log(funzione);
+
+function leftRotate(arr, d) {
+    var arrFirstDElements = [];
+    var restOfArray = [];
+
+    for (var i = 0; i < d; i++) {
+        arrFirstDElements.push(arr[i])
+    }
+    for (var i = d; i < arr.length; i++) {
+        restOfArray.push(arr[i])
+    }
+
+    var rotatedArray = restOfArray.concat(arrFirstDElements);
+
+    return rotatedArray
+}
 //-----------------------------------------------------------------------------------------------------
     // 7ku
 //-----------------------------------------------------------------------------------------------------
@@ -1266,23 +1268,23 @@
          The input string will only consist of lower case letters and/or spaces.
     */
 
-// var str = 'abracadabra';
-//
-//
-// var funzione = getCount(str);
-// console.log(funzione);
-//
-// function getCount(str) {
-//     var vowelsCount = 0;
-//
-//     for (var i = 0; i < str.length; i++) {
-//         if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
-//             vowelsCount++;
-//         }
-//     }
-//
-//     return vowelsCount;
-// }
+var str = 'abracadabra';
+
+
+var funzione = getCount(str);
+console.log(funzione);
+
+function getCount(str) {
+    var vowelsCount = 0;
+
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+            vowelsCount++;
+        }
+    }
+
+    return vowelsCount;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1299,30 +1301,30 @@
             The parameter of accum is a string which includes only letters from a..z and A..Z.
     */
 
-// var s = 'ZpglnRxqenU';
-//
-//
-// var funzione = accum(s);
-// console.log(funzione);
-//
-// function accum(s) {
-//     var strAccum = '';
-//
-//     for (var i = 0; i < s.length; i++) {
-//         strAccum += s[i].toUpperCase();
-//         var lowerCaseLetter = s[i].toLowerCase();
-//
-//         for (var j = 0; j <= (i - 1); j++) {
-//             strAccum += lowerCaseLetter;
-//         }
-//
-//         if (i < s.length - 1) {
-//             strAccum += '-';
-//         }
-//     }
-//
-//     return strAccum;
-// }
+var s = 'ZpglnRxqenU';
+
+
+var funzione = accum(s);
+console.log(funzione);
+
+function accum(s) {
+    var strAccum = '';
+
+    for (var i = 0; i < s.length; i++) {
+        strAccum += s[i].toUpperCase();
+        var lowerCaseLetter = s[i].toLowerCase();
+
+        for (var j = 0; j <= (i - 1); j++) {
+            strAccum += lowerCaseLetter;
+        }
+
+        if (i < s.length - 1) {
+            strAccum += '-';
+        }
+    }
+
+    return strAccum;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1341,64 +1343,64 @@
 
     */
 
-// var numbers = "8 16 -15 21 56 -4";
-//
-// var funzione = highAndLow(numbers);
-// console.log(funzione);
-//
-//
-// function highAndLow(numbers) {
-//     var arrayNumbers = numbersStringToArray(numbers);
-//
-//     var minNumber = arrayNumbers[0];
-//     var maxNumber = arrayNumbers[0];
-//
-//     for (var i = 0; i < arrayNumbers.length; i++) {
-//         if (arrayNumbers[i] > maxNumber) {
-//             maxNumber = arrayNumbers[i];
-//         } else if (arrayNumbers[i] < minNumber) {
-//             minNumber = arrayNumbers[i];
-//         }
-//     }
-//
-//     return maxNumber + ' ' + minNumber;
-// }
-//
-// function numbersStringToArray(numbers) {        // questa funzione prende una stringa con numeri e la trasforma in un array
-//     var arrayNumbers = numbers.split(" ").map(Number);
-//
-//     return arrayNumbers;
-// }
-//  // METODO ALTERNATIVO
-// function numbersStringToArray(numbers) { // (non volendo usare lo split e volendosi complicare la vita) questa funzione prende una stringa con numeri e la trasforma in un array
-//     var arrayNumbers = [];
-//     var numberLength = 0;
-//
-//     for (var i = 0; i < numbers.length; i++) {      // ciclo nella stringa
-//
-//         if (numbers[i] == '-' || !isNaN(parseInt(numbers[i]))) {    // se l'iesimo e' un meno (-) oppure un numero aumento il contatore di 1
-//             numberLength++;
-//         } else {                                                    // quando c'e' uno spazio
-//             var number = '';
-//             for (var k = (i - numberLength); k < i; k++) {          // torno indietro nella stringa 'numbers' di 'numberLength' posizioni
-//                 number += numbers[k];                               // e ad ogni ciclo prendo il carattere e lo aggiungo alla variabile numero fino a che non raggiungo 'i'
-//             }
-//             arrayNumbers.push(parseInt(number));                    // inserisco nell'array il numero
-//             numberLength = 0;                                       // resetto il contatore lunghezza numero
-//         }
-//
-//         if (i == numbers.length - 1) {                              // se sono arrivato alla fine della stringa devo fare alcune modifiche al ciclo for
-//             var number = '';                                        // dato che la i non coincide piu' con uno spazio
-//             for (var k = (i - numberLength + 1); k <= i; k++) {
-//                 number += numbers[k];
-//             }
-//             arrayNumbers.push(parseInt(number));
-//             numberLength = 0;
-//         }
-//     }
-//
-//     return arrayNumbers;
-// }
+var numbers = "8 16 -15 21 56 -4";
+
+var funzione = highAndLow(numbers);
+console.log(funzione);
+
+
+function highAndLow(numbers) {
+    var arrayNumbers = numbersStringToArray(numbers);
+
+    var minNumber = arrayNumbers[0];
+    var maxNumber = arrayNumbers[0];
+
+    for (var i = 0; i < arrayNumbers.length; i++) {
+        if (arrayNumbers[i] > maxNumber) {
+            maxNumber = arrayNumbers[i];
+        } else if (arrayNumbers[i] < minNumber) {
+            minNumber = arrayNumbers[i];
+        }
+    }
+
+    return maxNumber + ' ' + minNumber;
+}
+
+function numbersStringToArray(numbers) {        // questa funzione prende una stringa con numeri e la trasforma in un array
+    var arrayNumbers = numbers.split(" ").map(Number);
+
+    return arrayNumbers;
+}
+ // METODO ALTERNATIVO
+function numbersStringToArray(numbers) { // (non volendo usare lo split e volendosi complicare la vita) questa funzione prende una stringa con numeri e la trasforma in un array
+    var arrayNumbers = [];
+    var numberLength = 0;
+
+    for (var i = 0; i < numbers.length; i++) {      // ciclo nella stringa
+
+        if (numbers[i] == '-' || !isNaN(parseInt(numbers[i]))) {    // se l'iesimo e' un meno (-) oppure un numero aumento il contatore di 1
+            numberLength++;
+        } else {                                                    // quando c'e' uno spazio
+            var number = '';
+            for (var k = (i - numberLength); k < i; k++) {          // torno indietro nella stringa 'numbers' di 'numberLength' posizioni
+                number += numbers[k];                               // e ad ogni ciclo prendo il carattere e lo aggiungo alla variabile numero fino a che non raggiungo 'i'
+            }
+            arrayNumbers.push(parseInt(number));                    // inserisco nell'array il numero
+            numberLength = 0;                                       // resetto il contatore lunghezza numero
+        }
+
+        if (i == numbers.length - 1) {                              // se sono arrivato alla fine della stringa devo fare alcune modifiche al ciclo for
+            var number = '';                                        // dato che la i non coincide piu' con uno spazio
+            for (var k = (i - numberLength + 1); k <= i; k++) {
+                number += numbers[k];
+            }
+            arrayNumbers.push(parseInt(number));
+            numberLength = 0;
+        }
+    }
+
+    return arrayNumbers;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1411,25 +1413,25 @@
             The function accepts an integer and returns an integer
     */
 
-// var num = 9119;
-//
-//
-// var funzione = squareDigits(num);
-// console.log(funzione);
-//
-// function squareDigits(num) {
-//     var string = num.toString();
-//     var squareDigit = '';
-//
-//     for (var i = 0; i < string.length; i++) {
-//         var num = parseInt(string[i]);
-//         var square = Math.pow(num, 2);
-//
-//         squareDigit += square;
-//     }
-//
-//     return parseInt(squareDigit);
-// }
+var num = 9119;
+
+
+var funzione = squareDigits(num);
+console.log(funzione);
+
+function squareDigits(num) {
+    var string = num.toString();
+    var squareDigit = '';
+
+    for (var i = 0; i < string.length; i++) {
+        var num = parseInt(string[i]);
+        var square = Math.pow(num, 2);
+
+        squareDigit += square;
+    }
+
+    return parseInt(squareDigit);
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1444,25 +1446,25 @@
         NOTES:
     */
 
-// var n = 123456789;
-//
-//
-// var funzione = descendingOrder(n);
-// console.log(funzione);
-//
-// function descendingOrder(n) {
-//     var nString = n.toString();
-//     var tempArray = [];
-//
-//     for (var i = 0; i < nString.length; i++) {
-//         tempArray.push(parseInt(nString[i]));
-//     }
-//
-//     tempArray.sort(function(a, b){return b-a});
-//     var arrayJoined = parseInt(tempArray.join(''));
-//
-//     return arrayJoined;
-// }
+var n = 123456789;
+
+
+var funzione = descendingOrder(n);
+console.log(funzione);
+
+function descendingOrder(n) {
+    var nString = n.toString();
+    var tempArray = [];
+
+    for (var i = 0; i < nString.length; i++) {
+        tempArray.push(parseInt(nString[i]));
+    }
+
+    tempArray.sort(function(a, b){return b-a});
+    var arrayJoined = parseInt(tempArray.join(''));
+
+    return arrayJoined;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1474,24 +1476,24 @@
         NOTES:
     */
 
-// var s = 'turns out random test cases are easier than writing out basic ones';
-//
-//
-// var funzione = findShort(s);
-// console.log(funzione);
-//
-// function findShort(s) {
-//     var arrayStr = s.split(' ');
-//
-//     var shortestString = arrayStr[0];
-//     for (var i = 0; i < arrayStr.length; i++) {
-//         if (arrayStr[i].length < shortestString.length) {
-//             shortestString = arrayStr[i];
-//         }
-//     }
-//
-//     return shortestString.length;
-// }
+var s = 'turns out random test cases are easier than writing out basic ones';
+
+
+var funzione = findShort(s);
+console.log(funzione);
+
+function findShort(s) {
+    var arrayStr = s.split(' ');
+
+    var shortestString = arrayStr[0];
+    for (var i = 0; i < arrayStr.length; i++) {
+        if (arrayStr[i].length < shortestString.length) {
+            shortestString = arrayStr[i];
+        }
+    }
+
+    return shortestString.length;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1503,43 +1505,43 @@
         NOTES:
     */
 
-// var str = "This website is for losers LOL!";
-//
-//
-// var funzione = disemvowel(str);
-// console.log(funzione);
-//
-// function disemvowel(str) {
-//     var newStr = '';
-//     for (var i = 0; i < str.length; i++) {
-//         switch (str[i]) {
-//             case 'a':
-//                 break
-//             case 'A':
-//                 break
-//             case 'e':
-//                 break
-//             case 'E':
-//                 break
-//             case 'i':
-//                 break
-//             case 'I':
-//                 break
-//             case 'o':
-//                 break
-//             case 'O':
-//                 break
-//             case 'u':
-//                 break
-//             case 'U':
-//                 break
-//             default:
-//                 newStr += str[i];
-//         }
-//     }
-//
-//     return newStr;
-// }
+var str = "This website is for losers LOL!";
+
+
+var funzione = disemvowel(str);
+console.log(funzione);
+
+function disemvowel(str) {
+    var newStr = '';
+    for (var i = 0; i < str.length; i++) {
+        switch (str[i]) {
+            case 'a':
+                break
+            case 'A':
+                break
+            case 'e':
+                break
+            case 'E':
+                break
+            case 'i':
+                break
+            case 'I':
+                break
+            case 'o':
+                break
+            case 'O':
+                break
+            case 'u':
+                break
+            case 'U':
+                break
+            default:
+                newStr += str[i];
+        }
+    }
+
+    return newStr;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1555,23 +1557,23 @@
         NOTES:
     */
 
-// var str = "Dermatoglyphics";
-// var str = "moOse";
-//
-//
-// var funzione = isIsogram(str);
-// console.log(funzione);
-//
-// function isIsogram(str) {
-//     for (var i = 0; i < str.length; i++) {
-//         for (var j = (i + 1); j < str.length; j++) {
-//             if (str[i].toLowerCase() == str[j].toLowerCase()) {
-//                 return false;
-//             }
-//         }
-//     }
-//     return true;
-// }
+var str = "Dermatoglyphics";
+var str = "moOse";
+
+
+var funzione = isIsogram(str);
+console.log(funzione);
+
+function isIsogram(str) {
+    for (var i = 0; i < str.length; i++) {
+        for (var j = (i + 1); j < str.length; j++) {
+            if (str[i].toLowerCase() == str[j].toLowerCase()) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1583,24 +1585,24 @@
         NOTES:
     */
 
-// var str = "How can mirrors be real if our eyes aren't real";
-//
-//
-// var funzione = capitalize(str);
-// console.log(funzione);
-//
-// function capitalize(str) {
-//     var strArray = str.split(' ');
-//     var arrayCapitalized = [];
-//
-//     for (var i = 0; i < strArray.length; i++) {
-//         let stringICapitalized = strArray[i][0].toUpperCase() + strArray[i].substring(1);
-//         arrayCapitalized.push(stringICapitalized);
-//     }
-//     var stringCapitalized = arrayCapitalized.join(' ');
-//
-//     return stringCapitalized;
-// }
+var str = "How can mirrors be real if our eyes aren't real";
+
+
+var funzione = capitalize(str);
+console.log(funzione);
+
+function capitalize(str) {
+    var strArray = str.split(' ');
+    var arrayCapitalized = [];
+
+    for (var i = 0; i < strArray.length; i++) {
+        let stringICapitalized = strArray[i][0].toUpperCase() + strArray[i].substring(1);
+        arrayCapitalized.push(stringICapitalized);
+    }
+    var stringCapitalized = arrayCapitalized.join(' ');
+
+    return stringCapitalized;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1620,34 +1622,34 @@
             a and b are not ordered!
     */
 
-// var a = -1;
-// var b = 2;
-//
-//
-// var funzione = getSum(a,b) ;
-// console.log(funzione);
-//
-// function getSum(a,b) {
-//     var min = 0;
-//     var max = 0;
-//
-//     if (a == b) {
-//         return a;
-//     } else if (a > b) {
-//         max = a;
-//         min = b;
-//     } else {
-//         min = a;
-//         max = b;
-//     }
-//
-//     var sum = 0;
-//     for (var i = min; i <= max; i++) {
-//         sum += i;
-//     }
-//
-//     return sum;
-// }
+var a = -1;
+var b = 2;
+
+
+var funzione = getSum(a,b) ;
+console.log(funzione);
+
+function getSum(a,b) {
+    var min = 0;
+    var max = 0;
+
+    if (a == b) {
+        return a;
+    } else if (a > b) {
+        max = a;
+        min = b;
+    } else {
+        min = a;
+        max = b;
+    }
+
+    var sum = 0;
+    for (var i = min; i <= max; i++) {
+        sum += i;
+    }
+
+    return sum;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1675,27 +1677,27 @@
             aug is an integer, percent a positive or null number, p0 and p are positive integers (> 0)
     */
 
-// var p0 = 1500;
-// var percent = 5;
-// var aug = 100;
-// var p = 5000;
-//
-//
-// var funzione = nbYear(p0, percent, aug, p) ;
-// console.log(funzione);
-//
-// function nbYear(p0, percent, aug, p) {
-//     var increasePerYear = (p0 * [1 + (percent / 100)]) + aug;
-//
-//     var i = 0;
-//     while (p0 < p) {
-//         p0 = (p0 * [1 + (percent / 100)]) + aug;
-//
-//         i++;
-//     }
-//
-//     return i;
-// }
+var p0 = 1500;
+var percent = 5;
+var aug = 100;
+var p = 5000;
+
+
+var funzione = nbYear(p0, percent, aug, p) ;
+console.log(funzione);
+
+function nbYear(p0, percent, aug, p) {
+    var increasePerYear = (p0 * [1 + (percent / 100)]) + aug;
+
+    var i = 0;
+    while (p0 < p) {
+        p0 = (p0 * [1 + (percent / 100)]) + aug;
+
+        i++;
+    }
+
+    return i;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1714,27 +1716,27 @@
         NOTES:
     */
 
-// var s1 = 'aretheyhere';
-// var s2 = 'yestheyarehere';
-//
-//
-// var funzione = longest(s1, s2);
-// console.log(funzione);
-//
-// function longest(s1, s2) {
-//     var sumString = s1 + s2;
-//
-//     var distinctString = [];
-//     for (var i = 0; i < sumString.length; i++) {
-//         if (!distinctString.includes(sumString[i])) { // if sumString[i] is not already present push
-//             distinctString.push(sumString[i]);
-//         }
-//     }
-//     var sortedArray = distinctString.sort();
-//     var sortedString = sortedArray.join('');
-//
-//     return sortedString;
-// }
+var s1 = 'aretheyhere';
+var s2 = 'yestheyarehere';
+
+
+var funzione = longest(s1, s2);
+console.log(funzione);
+
+function longest(s1, s2) {
+    var sumString = s1 + s2;
+
+    var distinctString = [];
+    for (var i = 0; i < sumString.length; i++) {
+        if (!distinctString.includes(sumString[i])) { // if sumString[i] is not already present push
+            distinctString.push(sumString[i]);
+        }
+    }
+    var sortedArray = distinctString.sort();
+    var sortedString = sortedArray.join('');
+
+    return sortedString;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1749,23 +1751,23 @@
         NOTES:
     */
 
-// var l = [1,2,'aasf','1','123',123];
-//
-//
-// var funzione = filter_list(l);
-// console.log(funzione);
-//
-// function filter_list(l) {
-//     var newList = [];
-//
-//     for (var i = 0; i < l.length; i++) {
-//         if (typeof l[i] == 'number') {      // used typeof instead of isNaN because isNaN takes the number even if it's in a string
-//             newList.push(l[i]);
-//         }
-//     }
-//
-//     return newList;
-// }
+var l = [1,2,'aasf','1','123',123];
+
+
+var funzione = filter_list(l);
+console.log(funzione);
+
+function filter_list(l) {
+    var newList = [];
+
+    for (var i = 0; i < l.length; i++) {
+        if (typeof l[i] == 'number') {      // used typeof instead of isNaN because isNaN takes the number even if it's in a string
+            newList.push(l[i]);
+        }
+    }
+
+    return newList;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1780,18 +1782,18 @@
         NOTES:
     */
 
-// var numbers = [15, 28, 4, 2, 43];
-//
-//
-// var funzione = sumTwoSmallestNumbers(numbers);
-// console.log(funzione);
-//
-// function sumTwoSmallestNumbers(numbers) {
-//     var numbersSorted = numbers.slice(0).sort(function(a, b){return a-b});
-//     var sumOf2Lowest = numbersSorted[0] + numbersSorted[1];
-//
-//     return sumOf2Lowest;
-// }
+var numbers = [15, 28, 4, 2, 43];
+
+
+var funzione = sumTwoSmallestNumbers(numbers);
+console.log(funzione);
+
+function sumTwoSmallestNumbers(numbers) {
+    var numbersSorted = numbers.slice(0).sort(function(a, b){return a-b});
+    var sumOf2Lowest = numbersSorted[0] + numbersSorted[1];
+
+    return sumOf2Lowest;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1810,27 +1812,27 @@
         NOTES:
     */
 
-// var cc = '4556364607935616';
-//
-//
-// var funzione = maskify(cc);
-// console.log(funzione);
-//
-// function maskify(cc) {
-//     if (cc.length >= 5) {
-//         var maskedString = '';
-//         for (var i = 0; i < cc.length - 4; i++) {
-//             maskedString += '#';
-//         }
-//         for (var i = cc.length - 4; i < cc.length; i++) {
-//             maskedString += cc[i];
-//         }
-//
-//         return maskedString;
-//     } else {
-//         return cc;
-//     }
-// }
+var cc = '4556364607935616';
+
+
+var funzione = maskify(cc);
+console.log(funzione);
+
+function maskify(cc) {
+    if (cc.length >= 5) {
+        var maskedString = '';
+        for (var i = 0; i < cc.length - 4; i++) {
+            maskedString += '#';
+        }
+        for (var i = cc.length - 4; i < cc.length; i++) {
+            maskedString += cc[i];
+        }
+
+        return maskedString;
+    } else {
+        return cc;
+    }
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1850,39 +1852,39 @@
         NOTES:
     */
 
-// var n = 5;
-//
-//
-// var funzione = rowSumOddNumbers(n);
-// console.log(funzione);
-//
-//
-// function rowSumOddNumbers(n) {  // easy solution
-//     return Math.pow(n, 3);
-// }
-// function rowSumOddNumbers(n) {
-//     if (n == 1) {
-//         return 1;
-//     }
-//
-//     var numbersToCreateBefore = 0;
-//     for (var i = n - 1; i > 0; i--) {           // this for loop tells me how many odd numbers there are before
-//         numbersToCreateBefore += i;             // the selected row (n)
-//     }
-//
-//     var oddNumber = 1;
-//     for (var i = 1; i < numbersToCreateBefore; i++) {   // since now I know how many odd numbers there are before n
-//         oddNumber += 2;                                 // with a for loop I can create the last odd number before the row n
-//     }
-//
-//     var rowSumNumber = 0;
-//     for (var i = 1; i <= n; i++) {              // now I can create the sum of the row numbers by generating the next odd numbers
-//         oddNumber += 2;                         // that are equal to the number of the row
-//         rowSumNumber += oddNumber;
-//     }
-//
-//     return rowSumNumber;
-// }
+var n = 5;
+
+
+var funzione = rowSumOddNumbers(n);
+console.log(funzione);
+
+
+function rowSumOddNumbers(n) {  // easy solution
+    return Math.pow(n, 3);
+}
+function rowSumOddNumbers(n) {
+    if (n == 1) {
+        return 1;
+    }
+
+    var numbersToCreateBefore = 0;
+    for (var i = n - 1; i > 0; i--) {           // this for loop tells me how many odd numbers there are before
+        numbersToCreateBefore += i;             // the selected row (n)
+    }
+
+    var oddNumber = 1;
+    for (var i = 1; i < numbersToCreateBefore; i++) {   // since now I know how many odd numbers there are before n
+        oddNumber += 2;                                 // with a for loop I can create the last odd number before the row n
+    }
+
+    var rowSumNumber = 0;
+    for (var i = 1; i <= n; i++) {              // now I can create the sum of the row numbers by generating the next odd numbers
+        oddNumber += 2;                         // that are equal to the number of the row
+        rowSumNumber += oddNumber;
+    }
+
+    return rowSumNumber;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1899,24 +1901,24 @@
         NOTES:
     */
 
-// var sq = 121;
-//
-//
-// var funzione = findNextSquare(sq);
-// console.log(funzione);
-//
-// function findNextSquare(sq) {
-//     if (!Number.isInteger(Math.sqrt(sq))) { // if 'sq' is not a perfect square
-//         return -1;
-//     }
-//
-//     var newSq = sq + 1;
-//     while (!Number.isInteger(Math.sqrt(newSq))) {   // I add 1 to 'newSq' until the square of that number is not an integer
-//         newSq++;
-//     }
-//
-//     return newSq;
-// }
+var sq = 121;
+
+
+var funzione = findNextSquare(sq);
+console.log(funzione);
+
+function findNextSquare(sq) {
+    if (!Number.isInteger(Math.sqrt(sq))) { // if 'sq' is not a perfect square
+        return -1;
+    }
+
+    var newSq = sq + 1;
+    while (!Number.isInteger(Math.sqrt(newSq))) {   // I add 1 to 'newSq' until the square of that number is not an integer
+        newSq++;
+    }
+
+    return newSq;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1935,47 +1937,47 @@
             If the number has leading zeros the amount of digits should be considered.
     */
 
-// var strng = 'foobar000';
-//
-//
-// var funzione = incrementString(strng);
-// console.log(funzione);
-//
-// function incrementString(strng) {
-//     var numberStr = '';
-//     var word = '';
-//
-//     for (var i = 0; i < strng.length; i++) {    // separate numbers from char
-//         if (!isNaN(strng[i])) {
-//             numberStr += strng[i];
-//         } else {
-//             word += strng[i]
-//         }
-//     }
-//     if (numberStr == '') {
-//         return word + '1';
-//     }
-//
-//     var numbers = parseInt(numberStr) + 1;      // add a number and convert to a string
-//     var numberString = numbers.toString();
-//
-//     var numberToAdd = '';
-//
-//     if (numberString.length < numberStr.length) {   // if the new number has less digit than the orgiginal
-//         var differenceLength = numberStr.length - numberString.length;
-//
-//         var newNumbers = '';
-//         for (var i = 1; i <= differenceLength; i++) {   // I add as many 0 as the difference
-//             newNumbers += '0';
-//         }
-//         newNumbers += numberString;
-//         numberToAdd = newNumbers;
-//     } else {
-//         numberToAdd = numberString;
-//     }
-//
-//     return word + numberToAdd;
-// }
+var strng = 'foobar000';
+
+
+var funzione = incrementString(strng);
+console.log(funzione);
+
+function incrementString(strng) {
+    var numberStr = '';
+    var word = '';
+
+    for (var i = 0; i < strng.length; i++) {    // separate numbers from char
+        if (!isNaN(strng[i])) {
+            numberStr += strng[i];
+        } else {
+            word += strng[i]
+        }
+    }
+    if (numberStr == '') {
+        return word + '1';
+    }
+
+    var numbers = parseInt(numberStr) + 1;      // add a number and convert to a string
+    var numberString = numbers.toString();
+
+    var numberToAdd = '';
+
+    if (numberString.length < numberStr.length) {   // if the new number has less digit than the orgiginal
+        var differenceLength = numberStr.length - numberString.length;
+
+        var newNumbers = '';
+        for (var i = 1; i <= differenceLength; i++) {   // I add as many 0 as the difference
+            newNumbers += '0';
+        }
+        newNumbers += numberString;
+        numberToAdd = newNumbers;
+    } else {
+        numberToAdd = numberString;
+    }
+
+    return word + numberToAdd;
+}
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------
@@ -1997,42 +1999,42 @@
         NOTES:
     */
 
-// var peopleInLine = [25, 25, 25, 25, 50, 100, 50];
-//
-//
-// var funzione = tickets(peopleInLine);
-// console.log(funzione);
-//
-// function tickets(peopleInLine) {
-//     var money = {
-//         25: 0,
-//         50: 0,
-//         100: 0
-//     }
-//
-//     for (var i = 0; i < peopleInLine.length; i++) {
-//         var billX = peopleInLine[i];
-//         money[billX]++;
-//
-//         if (billX == 50) {
-//             money[25]--;
-//             if (money[25] < 0) {
-//                 return 'NO';
-//             }
-//         } else if (billX == 100) {
-//             if (money[50] >= 1 && money[25] >= 1) {
-//                 money[50]--;
-//                 money[25]--;
-//             } else if (money[25] >= 3) {
-//                 money[25] += -3;
-//             } else {
-//                 return 'NO';
-//             }
-//         }
-//     }
-//
-//     return 'YES';
-// }
+var peopleInLine = [25, 25, 25, 25, 50, 100, 50];
+
+
+var funzione = tickets(peopleInLine);
+console.log(funzione);
+
+function tickets(peopleInLine) {
+    var money = {
+        25: 0,
+        50: 0,
+        100: 0
+    }
+
+    for (var i = 0; i < peopleInLine.length; i++) {
+        var billX = peopleInLine[i];
+        money[billX]++;
+
+        if (billX == 50) {
+            money[25]--;
+            if (money[25] < 0) {
+                return 'NO';
+            }
+        } else if (billX == 100) {
+            if (money[50] >= 1 && money[25] >= 1) {
+                money[50]--;
+                money[25]--;
+            } else if (money[25] >= 3) {
+                money[25] += -3;
+            } else {
+                return 'NO';
+            }
+        }
+    }
+
+    return 'YES';
+}
 //-----------------------------------------------------------------------------------------------------
 
 
