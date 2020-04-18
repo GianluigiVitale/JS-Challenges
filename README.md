@@ -2,10 +2,10 @@
 ### CodeWars Profile Link: https://www.codewars.com/users/GianluigiVitale
 ***
 **To look for a specific challenge just open the folder 'List Of Challenges' and open the file named 'Challenge Name'.js**   
-_For Example: to find the 12th challenge (Volume of a Box) just search for: Volume of a Box_
+_For Example: to find the 12th challenge (Volume of a Box) just search in the above folder for: Volume of a Box.js_
 
 **The file main.js contains ALL the challenges one below the other (useful to watch quickly ALL the challenges)**   
-_To find the 10th challenge (Grasshopper - Summation) open the index.php file and just search for: Grasshopper - Summation_
+_To find the 12th challenge (Volume of a Box) open the main.js file and just search for: Volume of a Box_
 ***
 _The challenges are organized in a chronological order_
 
