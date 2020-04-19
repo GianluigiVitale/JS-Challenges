@@ -16,7 +16,7 @@ var funzione = sumTwoSmallestNumbers(numbers);
 console.log(funzione);
 
 function sumTwoSmallestNumbers(numbers) {
-    var numbersSorted = numbers.slice(0).sort(function(a, b){return a-b});
+    var numbersSorted = numbers.sort(function(a, b){return a-b});
     var sumOf2Lowest = numbersSorted[0] + numbersSorted[1];
 
     return sumOf2Lowest;

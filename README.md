@@ -59,7 +59,8 @@ _' kyu ' is the difficulty: easiest 8kyu, hardest 1kyu_
 45. Removing Elements
 46. Practice creating a binary search algorithm   
     [not from codewars]
-47. Rotate an array
+47. Rotate an array  
+    [not from codewars]
 
 7kyu
 

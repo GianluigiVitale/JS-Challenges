@@ -935,6 +935,20 @@ console.log(funzione);
 
 function game(player1, player2) {
     if (player1 == player2) {
+        return 'Draw!';
+    }
+
+    if (player1 == 'rock' && player2 == 'scissors' ||
+        player1 == 'scissors' && player2 == 'paper' ||
+        player1 === 'paper' && player2 === 'rock') {
+        return 'Player 1 won!';
+    } else {
+        return 'Player 2 won!';
+    }
+}
+// alternative method
+function game(player1, player2) {
+    if (player1 == player2) {
         return 'Draw!'
     } else {
         if (player1 == 'paper') {
@@ -1043,6 +1057,10 @@ var n = 35231;
 var funzione = digitize(n);
 console.log(funzione);
 
+function digitize(n) {
+    return n.toString().split('').reverse().map(Number);
+}
+// alternative method
 function digitize(n) {
     var numberToString = n.toString();
     var arrayNumberReversed = [];
@@ -1325,10 +1343,13 @@ console.log(funzione);
 
 function getCount(str) {
     var vowelsCount = 0;
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
 
     for (var i = 0; i < str.length; i++) {
-        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
-            vowelsCount++;
+        for (var j = 0; j < vowels.length; j++) {
+            if (str[i] == vowels[i]) {
+                vowelsCount++;
+            }
         }
     }
 
@@ -1401,25 +1422,19 @@ console.log(funzione);
 function highAndLow(numbers) {
     var arrayNumbers = numbersStringToArray(numbers);
 
-    var minNumber = arrayNumbers[0];
-    var maxNumber = arrayNumbers[0];
-
-    for (var i = 0; i < arrayNumbers.length; i++) {
-        if (arrayNumbers[i] > maxNumber) {
-            maxNumber = arrayNumbers[i];
-        } else if (arrayNumbers[i] < minNumber) {
-            minNumber = arrayNumbers[i];
-        }
-    }
+    var minNumber = Math.min(...arrayNumbers);
+    var maxNumber = Math.max(...arrayNumbers);
 
     return maxNumber + ' ' + minNumber;
 }
 
-function numbersStringToArray(numbers) {        // questa funzione prende una stringa con numeri e la trasforma in un array
+function numbersStringToArray(numbers) {        // questa funzione prende una stringa con numeri e la trasforma in un array di numeri
     var arrayNumbers = numbers.split(" ").map(Number);
 
     return arrayNumbers;
 }
+
+
  // METODO ALTERNATIVO
 function numbersStringToArray(numbers) { // (non volendo usare lo split e volendosi complicare la vita) questa funzione prende una stringa con numeri e la trasforma in un array
     var arrayNumbers = [];
@@ -1495,7 +1510,7 @@ function squareDigits(num) {
         NOTES:
     */
 
-var n = 123456789;
+var n = 145263;
 
 
 var funzione = descendingOrder(n);
@@ -1503,14 +1518,10 @@ console.log(funzione);
 
 function descendingOrder(n) {
     var nString = n.toString();
-    var tempArray = [];
+    var arrayNumbers = nString.split('').map(Number);
 
-    for (var i = 0; i < nString.length; i++) {
-        tempArray.push(parseInt(nString[i]));
-    }
-
-    tempArray.sort(function(a, b){return b-a});
-    var arrayJoined = parseInt(tempArray.join(''));
+    arrayNumbers.sort(function(a, b){return b-a});
+    var arrayJoined = parseInt(arrayNumbers.join(''));
 
     return arrayJoined;
 }
@@ -1562,6 +1573,7 @@ console.log(funzione);
 
 function disemvowel(str) {
     var newStr = '';
+    var vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
     for (var i = 0; i < str.length; i++) {
         switch (str[i]) {
             case 'a':
@@ -1736,11 +1748,9 @@ var funzione = nbYear(p0, percent, aug, p) ;
 console.log(funzione);
 
 function nbYear(p0, percent, aug, p) {
-    var increasePerYear = (p0 * [1 + (percent / 100)]) + aug;
-
     var i = 0;
     while (p0 < p) {
-        p0 = (p0 * [1 + (percent / 100)]) + aug;
+        p0 = p0 * [1 + (percent / 100)] + aug;
 
         i++;
     }
@@ -1752,7 +1762,7 @@ function nbYear(p0, percent, aug, p) {
 //-----------------------------------------------------------------------------------------------------
     /* 59. Two to One
 
-        >Take 2 strings s1 and s2 including only letters from ato z.
+        >Take 2 strings s1 and s2 including only letters from a to z.
          Return a new sorted string, the longest possible, containing distinct letters,
          each taken only once - coming from s1 or s2.
         EXAMPLE:
@@ -1838,7 +1848,7 @@ var funzione = sumTwoSmallestNumbers(numbers);
 console.log(funzione);
 
 function sumTwoSmallestNumbers(numbers) {
-    var numbersSorted = numbers.slice(0).sort(function(a, b){return a-b});
+    var numbersSorted = numbers.sort(function(a, b){return a-b});
     var sumOf2Lowest = numbersSorted[0] + numbersSorted[1];
 
     return sumOf2Lowest;
@@ -1861,7 +1871,7 @@ function sumTwoSmallestNumbers(numbers) {
         NOTES:
     */
 
-var cc = '4556364607935616';
+var cc = '1111111111115616';
 
 
 var funzione = maskify(cc);
@@ -1908,9 +1918,10 @@ var funzione = rowSumOddNumbers(n);
 console.log(funzione);
 
 
-function rowSumOddNumbers(n) {  // easy solution
+function rowSumOddNumbers(n) {
     return Math.pow(n, 3);
 }
+// alternative method
 function rowSumOddNumbers(n) {
     if (n == 1) {
         return 1;
@@ -2007,12 +2018,12 @@ function incrementString(strng) {
         return word + '1';
     }
 
-    var numbers = parseInt(numberStr) + 1;      // add a number and convert to a string
+    var numbers = parseInt(numberStr) + 1;      // add a number to numberStr and convert to an integer
     var numberString = numbers.toString();
 
     var numberToAdd = '';
 
-    if (numberString.length < numberStr.length) {   // if the new number has less digit than the orgiginal
+    if (numberString.length < numberStr.length) {   // if the new number has less digit than the original
         var differenceLength = numberStr.length - numberString.length;
 
         var newNumbers = '';

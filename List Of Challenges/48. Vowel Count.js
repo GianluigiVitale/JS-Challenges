@@ -13,10 +13,13 @@ console.log(funzione);
 
 function getCount(str) {
     var vowelsCount = 0;
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
 
     for (var i = 0; i < str.length; i++) {
-        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
-            vowelsCount++;
+        for (var j = 0; j < vowels.length; j++) {
+            if (str[i] == vowels[i]) {
+                vowelsCount++;
+            }
         }
     }
 

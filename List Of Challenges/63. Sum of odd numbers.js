@@ -21,9 +21,10 @@ var funzione = rowSumOddNumbers(n);
 console.log(funzione);
 
 
-function rowSumOddNumbers(n) {  // easy solution
+function rowSumOddNumbers(n) {
     return Math.pow(n, 3);
 }
+// alternative method
 function rowSumOddNumbers(n) {
     if (n == 1) {
         return 1;

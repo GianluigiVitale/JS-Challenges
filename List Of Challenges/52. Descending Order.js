@@ -17,14 +17,10 @@ console.log(funzione);
 
 function descendingOrder(n) {
     var nString = n.toString();
-    var tempArray = [];
+    var arrayNumbers = nString.split('').map(Number);
 
-    for (var i = 0; i < nString.length; i++) {
-        tempArray.push(parseInt(nString[i]));
-    }
-
-    tempArray.sort(function(a, b){return b-a});
-    var arrayJoined = parseInt(tempArray.join(''));
+    arrayNumbers.sort(function(a, b){return b-a});
+    var arrayJoined = parseInt(arrayNumbers.join(''));
 
     return arrayJoined;
 }

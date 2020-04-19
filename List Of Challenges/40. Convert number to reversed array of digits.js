@@ -11,6 +11,10 @@ var funzione = digitize(n);
 console.log(funzione);
 
 function digitize(n) {
+    return n.toString().split('').reverse().map(Number);
+}
+// alternative method
+function digitize(n) {
     var numberToString = n.toString();
     var arrayNumberReversed = [];
 

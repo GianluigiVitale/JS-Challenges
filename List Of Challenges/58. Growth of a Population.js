@@ -32,11 +32,9 @@ var funzione = nbYear(p0, percent, aug, p) ;
 console.log(funzione);
 
 function nbYear(p0, percent, aug, p) {
-    var increasePerYear = (p0 * [1 + (percent / 100)]) + aug;
-
     var i = 0;
     while (p0 < p) {
-        p0 = (p0 * [1 + (percent / 100)]) + aug;
+        p0 = p0 * [1 + (percent / 100)] + aug;
 
         i++;
     }

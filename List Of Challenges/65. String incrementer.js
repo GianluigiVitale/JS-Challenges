@@ -34,12 +34,12 @@ function incrementString(strng) {
         return word + '1';
     }
 
-    var numbers = parseInt(numberStr) + 1;      // add a number and convert to a string
+    var numbers = parseInt(numberStr) + 1;      // add a number to numberStr and convert to an integer
     var numberString = numbers.toString();
 
     var numberToAdd = '';
 
-    if (numberString.length < numberStr.length) {   // if the new number has less digit than the orgiginal
+    if (numberString.length < numberStr.length) {   // if the new number has less digit than the original
         var differenceLength = numberStr.length - numberString.length;
 
         var newNumbers = '';

@@ -22,25 +22,19 @@ console.log(funzione);
 function highAndLow(numbers) {
     var arrayNumbers = numbersStringToArray(numbers);
 
-    var minNumber = arrayNumbers[0];
-    var maxNumber = arrayNumbers[0];
-
-    for (var i = 0; i < arrayNumbers.length; i++) {
-        if (arrayNumbers[i] > maxNumber) {
-            maxNumber = arrayNumbers[i];
-        } else if (arrayNumbers[i] < minNumber) {
-            minNumber = arrayNumbers[i];
-        }
-    }
+    var minNumber = Math.min(...arrayNumbers);
+    var maxNumber = Math.max(...arrayNumbers);
 
     return maxNumber + ' ' + minNumber;
 }
 
-function numbersStringToArray(numbers) {        // questa funzione prende una stringa con numeri e la trasforma in un array
+function numbersStringToArray(numbers) {        // questa funzione prende una stringa con numeri e la trasforma in un array di numeri
     var arrayNumbers = numbers.split(" ").map(Number);
 
     return arrayNumbers;
 }
+
+
  // METODO ALTERNATIVO
 function numbersStringToArray(numbers) { // (non volendo usare lo split e volendosi complicare la vita) questa funzione prende una stringa con numeri e la trasforma in un array
     var arrayNumbers = [];
