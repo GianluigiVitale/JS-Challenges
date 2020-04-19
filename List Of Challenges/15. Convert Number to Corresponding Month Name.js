@@ -11,5 +11,6 @@ console.log(funzione)
 function monthName(num) {
 	var arrayMonth = ['January', 'February', 'March', 'April', 'May', 'June',
 	'July', 'August', 'September', 'October', 'November', 'December'];
+	
 	return arrayMonth[num-1];
 }

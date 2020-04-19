@@ -19,6 +19,10 @@ var funzione = power(base, exponent);
 console.log(funzione);
 
 function power(base, exponent) {
+	return Math.pow(base, exponent);
+}
+// alternative method
+function power(base, exponent) {
 	var number = 1;
 
 	for (var i = 1; i <= exponent; i++) {
@@ -128,6 +132,10 @@ console.log(funzione)
 
 
 function concat(arr1, arr2) {
+	return arr1.concat(arr2);
+}
+// alternative method
+function concat(arr1, arr2) {
 	var array1and2 = arr1;
 	for (var i = 0; i < arr2.length; i++) {
 		array1and2.push(arr2[i]);
@@ -233,6 +241,10 @@ console.log(funzione)
 
 
 function findIndex(arr, str) {
+	return arr.indexOf(str);
+}
+// alternative method
+function findIndex(arr, str) {
 	for (var i = 0; i < arr.length; i++) {
 		if (arr[i] == str) {
 			var strIndex = i;
@@ -261,13 +273,13 @@ function identicalFilter(arr) {
 		var repeatingString = false;
 
 		var lengthString = arr[i].length;
-
-		for (var j = 0; j < (lengthString - 1); j++) {
+		for (var j = 0; j < (lengthString - 1); j++) {    // loop through every char of the single element of the array
 			var chartString = arr[i][j];
-			if (chartString != arr[i][j+1]) {
+			if (chartString != arr[i][j+1]) {    // if This char is different from the next
 				repeatingString = true;
 			}
 		}
+
 		if (repeatingString == false) {
 			arraySingleChar.push(arr[i]);
 		}
@@ -290,6 +302,7 @@ console.log(funzione)
 function monthName(num) {
 	var arrayMonth = ['January', 'February', 'March', 'April', 'May', 'June',
 	'July', 'August', 'September', 'October', 'November', 'December'];
+
 	return arrayMonth[num-1];
 }
 //-----------------------------------------------------------------------------------------------------
@@ -303,6 +316,10 @@ var str = 'CIAO';
 var funzione = reverseCapitalize(str);
 console.log(funzione)
 
+function reverseCapitalize(str) {
+	return str.split('').reverse().join('').toUpperCase();
+}
+// alternative method
 function reverseCapitalize(str) {
 	var newStringReversed = '';
 
@@ -371,6 +388,13 @@ var funzione = minMax(arr);
 console.log(funzione)
 
 function minMax(arr) {
+	var minNum = Math.min(...arr);
+	var maxNum = Math.max(...arr);
+
+    return [minNum, maxNum];
+}
+// alternative method
+function minMax(arr) {
 	var arrayMinMax = [];
 	var maxNum = arr[0];
 	var minNum = arr[0];
@@ -406,6 +430,20 @@ var funzione = canNest(arr1, arr2);
 console.log(funzione)
 
 function canNest(arr1, arr2) {
+	var minArray1 = Math.min(...arr1);
+	var maxArray1 = Math.max(...arr1);
+	var minArray2 = Math.min(...arr2);
+	var maxArray2 = Math.max(...arr2);
+
+
+	if ((minArray1 > minArray2) && (maxArray1 < maxArray2)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+// alternative method
+function canNest(arr1, arr2) {
 	var minMaxArray1 = getMinMaxArray(arr1);
 	var minMaxArray2 = getMinMaxArray(arr2);
 
@@ -415,7 +453,6 @@ function canNest(arr1, arr2) {
 		return false;
 	}
 }
-
 function getMinMaxArray(array) {
 	var maxNum = array[0];
 	var minNum = array[0];
@@ -618,6 +655,10 @@ var funzione = noSpace(x);
 console.log(funzione);
 
 function noSpace(x) {
+    return x.replace(' ', '');
+}
+// alternative method
+function noSpace(x) {
     var noSpaceStr = '';
 
     for (var i = 0; i < x.length; i++) {
@@ -641,6 +682,10 @@ var arr = [34, -345, -1, 100];
 var funzione = minMax(arr);
 console.log(funzione);
 
+function minMax(arr) {
+	return Math.min(...arr);
+}
+// alternative method
 function minMax(arr) {
 	var minNum = arr[0];
 
@@ -693,6 +738,10 @@ var haystack = ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', t
 var funzione = findNeedle(haystack);
 console.log(funzione);
 
+function findNeedle(haystack) {
+    return haystack.indexOf('needle');
+}
+// alternative method
 function findNeedle(haystack) {
     for (var i = 0; i < haystack.length; i++) {
         if (haystack[i] == 'needle') {

@@ -9,6 +9,10 @@ var funzione = minMax(arr);
 console.log(funzione);
 
 function minMax(arr) {
+	return Math.min(...arr);
+}
+// alternative method
+function minMax(arr) {
 	var minNum = arr[0];
 
 	for (var i = 0; i < arr.length; i++) {

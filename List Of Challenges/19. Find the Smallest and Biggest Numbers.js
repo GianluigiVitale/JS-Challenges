@@ -8,6 +8,13 @@ var funzione = minMax(arr);
 console.log(funzione)
 
 function minMax(arr) {
+	var minNum = Math.min(...arr);
+	var maxNum = Math.max(...arr);
+
+    return [minNum, maxNum];
+}
+// alternative method
+function minMax(arr) {
 	var arrayMinMax = [];
 	var maxNum = arr[0];
 	var minNum = arr[0];

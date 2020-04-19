@@ -9,6 +9,10 @@ console.log(funzione)
 
 
 function concat(arr1, arr2) {
+	return arr1.concat(arr2);
+}
+// alternative method
+function concat(arr1, arr2) {
 	var array1and2 = arr1;
 	for (var i = 0; i < arr2.length; i++) {
 		array1and2.push(arr2[i]);

@@ -14,6 +14,10 @@ var funzione = findNeedle(haystack);
 console.log(funzione);
 
 function findNeedle(haystack) {
+    return haystack.indexOf('needle');
+}
+// alternative method
+function findNeedle(haystack) {
     for (var i = 0; i < haystack.length; i++) {
         if (haystack[i] == 'needle') {
             return "found the needle at position " + i;

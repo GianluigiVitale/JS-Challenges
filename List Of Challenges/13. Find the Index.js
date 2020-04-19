@@ -9,6 +9,10 @@ console.log(funzione)
 
 
 function findIndex(arr, str) {
+	return arr.indexOf(str);
+}
+// alternative method
+function findIndex(arr, str) {
 	for (var i = 0; i < arr.length; i++) {
 		if (arr[i] == str) {
 			var strIndex = i;

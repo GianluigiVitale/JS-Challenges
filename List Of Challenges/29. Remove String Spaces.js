@@ -9,6 +9,10 @@ var funzione = noSpace(x);
 console.log(funzione);
 
 function noSpace(x) {
+    return x.replace(' ', '');
+}
+// alternative method
+function noSpace(x) {
     var noSpaceStr = '';
 
     for (var i = 0; i < x.length; i++) {

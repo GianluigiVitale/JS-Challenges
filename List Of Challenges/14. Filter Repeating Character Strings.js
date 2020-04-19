@@ -16,13 +16,13 @@ function identicalFilter(arr) {
 		var repeatingString = false;
 
 		var lengthString = arr[i].length;
-
-		for (var j = 0; j < (lengthString - 1); j++) {
+		for (var j = 0; j < (lengthString - 1); j++) {    // loop through every char of the single element of the array
 			var chartString = arr[i][j];
-			if (chartString != arr[i][j+1]) {
+			if (chartString != arr[i][j+1]) {    // if This char is different from the next
 				repeatingString = true;
 			}
 		}
+
 		if (repeatingString == false) {
 			arraySingleChar.push(arr[i]);
 		}
